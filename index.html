@@ -532,8 +532,21 @@
     };
 
     // --- Home Page Component ---
-    const HomePage = ({ setActiveTab }) => {
-      const heroImg = "./Hero Page.png";
+    const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
+      const [isDark, setIsDark] = useState(() => 
+        isDarkModeProp !== undefined ? isDarkModeProp : document.documentElement.classList.contains('dark')
+      );
+
+      useEffect(() => {
+        const checkDark = () => setIsDark(document.documentElement.classList.contains('dark'));
+        checkDark();
+        const observer = new MutationObserver(checkDark);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+        return () => observer.disconnect();
+      }, []);
+
+      const activeDark = isDarkModeProp !== undefined ? isDarkModeProp : isDark;
+      const heroImg = activeDark ? "./hero-dark.jpg" : "./Hero Page.png";
       const artisanImg1 = "https://lh3.googleusercontent.com/aida-public/AB6AXuCHiB6q779wKd6u6KX7NzPYVPtK4tFRDmimWkVIrjY4BfInDGBUYTxQv5Tsutn9stdCfd1uhprI8taMus81dNCZghxTrPVfrc0rf58KNxmuseoN1dAhn6cF4yE-WwzvpOQPTkuaLBIdOERhBshLB-sdqe8VAYV858L5n0HrA-57cLOAWKzLOCVBkuh70Yg_gIuRPzyiiAEbTxc_A-jV-eIda4stlUs32bs2M0uvNpMQvNagVYa75emLyg";
       const artisanImg2 = "https://lh3.googleusercontent.com/aida-public/AB6AXuDbYo5xNefhakLNHPC80VqZN882X8_LUe-wq8lV48rD0u6cvqAxym-0He-0aSeiVRqLPQAxB7f6udfCWY_H8mXC_kQjNuJtMwYth6Il9VkBvCRUbqIfS2tQb1aVsZPTES-SIltwHzP7Gt9AHwDHuUX7U77QRUsOlr6V4m22-4oq_EePm9RdxN4LU1qA_0nQoon-wOFjKucR3K9RFH1uGTbbEDjwpV9RQxw0c8ccS_BUU8K-ZzHsd3qQ3A";
 
@@ -642,8 +655,21 @@
     };
 
     // --- Portfolio Page Component ---
-    const PortfolioPage = ({ setActiveTab }) => {
-      const bgImg = "./Hero Page.png";
+    const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
+      const [isDark, setIsDark] = useState(() => 
+        isDarkModeProp !== undefined ? isDarkModeProp : document.documentElement.classList.contains('dark')
+      );
+
+      useEffect(() => {
+        const checkDark = () => setIsDark(document.documentElement.classList.contains('dark'));
+        checkDark();
+        const observer = new MutationObserver(checkDark);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+        return () => observer.disconnect();
+      }, []);
+
+      const activeDark = isDarkModeProp !== undefined ? isDarkModeProp : isDark;
+      const bgImg = activeDark ? "./hero-dark.jpg" : "./Hero Page.png";
       const coachingImg = "./xyz-coaching.png";
       const coachingMobileImg = "./xyz-coaching-mobile.png";
       const jewelryImg = "./xyz-jewelry.jpg";
@@ -893,7 +919,7 @@
     };
 
     // --- Contact Page Component ---
-    const ContactPage = () => {
+    const ContactPage = ({ isDarkMode: isDarkModeProp }) => {
       const [formData, setFormData] = useState({ fullName: '', companyName: '', email: '', phone: '', industry: '', details: '' });
       const [isSubmitting, setIsSubmitting] = useState(false);
       const [submitted, setSubmitted] = useState(false);
@@ -901,7 +927,21 @@
 
       const SUPABASE_URL = "https://jusgwmygfdwjwlbkhowb.supabase.co";
       const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_63M5fUayCAc0FK6-5Hkzjw_AneidUzZ";
-      const bgImg = "./Hero Page.png";
+
+      const [isDark, setIsDark] = useState(() => 
+        isDarkModeProp !== undefined ? isDarkModeProp : document.documentElement.classList.contains('dark')
+      );
+
+      useEffect(() => {
+        const checkDark = () => setIsDark(document.documentElement.classList.contains('dark'));
+        checkDark();
+        const observer = new MutationObserver(checkDark);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+        return () => observer.disconnect();
+      }, []);
+
+      const activeDark = isDarkModeProp !== undefined ? isDarkModeProp : isDark;
+      const bgImg = activeDark ? "./hero-dark.jpg" : "./Hero Page.png";
 
       const handleChange = (e) => {
         const { id, value } = e.target;

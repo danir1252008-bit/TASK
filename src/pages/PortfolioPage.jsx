@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import coachingImg from '../assets/xyz-coaching.png';
 import coachingMobileImg from '../assets/xyz-coaching-mobile.png';
 import jewelryImg from '../assets/xyz-jewelry.jpg';
-import heroBgImg from '../assets/Hero Page.png';
+import heroLightAsset from '../assets/Hero Page.png';
+import heroDarkAsset from '../assets/hero-dark.jpg';
 
-const PortfolioPage = ({ setActiveTab }) => {
-  // Use Hero Page.png as background picture with soft blur and dark mode overlay
-  const bgImg = heroBgImg;
+const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
+  const [isDark, setIsDark] = useState(() => 
+    isDarkModeProp !== undefined ? isDarkModeProp : (typeof document !== 'undefined' && document.documentElement.classList.contains('dark'))
+  );
+
+  useEffect(() => {
+    const checkDark = () => {
+      if (typeof document !== 'undefined') {
+        setIsDark(document.documentElement.classList.contains('dark'));
+      }
+    };
+    checkDark();
+    const observer = new MutationObserver(checkDark);
+    if (typeof document !== 'undefined') {
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  const activeDarkMode = isDarkModeProp !== undefined ? isDarkModeProp : isDark;
+  const bgImg = activeDarkMode ? heroDarkAsset : heroLightAsset;
 
   return (
     <div className="relative min-h-screen bg-background">

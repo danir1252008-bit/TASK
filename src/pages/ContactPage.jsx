@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import heroLightAsset from '../assets/Hero Page.png';
+import heroDarkAsset from '../assets/hero-dark.jpg';
 
 // Supabase Project Configuration
 const SUPABASE_URL = "https://jusgwmygfdwjwlbkhowb.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_63M5fUayCAc0FK6-5Hkzjw_AneidUzZ";
 
-const ContactPage = () => {
+const ContactPage = ({ isDarkMode: isDarkModeProp }) => {
   const [formData, setFormData] = useState({
     fullName: '',
     companyName: '',
@@ -18,7 +20,26 @@ const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  const bgImg = "./Hero Page.png";
+  const [isDark, setIsDark] = useState(() => 
+    isDarkModeProp !== undefined ? isDarkModeProp : (typeof document !== 'undefined' && document.documentElement.classList.contains('dark'))
+  );
+
+  useEffect(() => {
+    const checkDark = () => {
+      if (typeof document !== 'undefined') {
+        setIsDark(document.documentElement.classList.contains('dark'));
+      }
+    };
+    checkDark();
+    const observer = new MutationObserver(checkDark);
+    if (typeof document !== 'undefined') {
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  const activeDarkMode = isDarkModeProp !== undefined ? isDarkModeProp : isDark;
+  const bgImg = activeDarkMode ? heroDarkAsset : heroLightAsset;
 
   const handleChange = (e) => {
     const { id, value } = e.target;
