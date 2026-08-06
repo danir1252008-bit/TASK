@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import heroLightAsset from '../assets/Hero Page.png';
+import heroDarkAsset from '../assets/hero-dark.jpg';
 
-const PricingPage = ({ setActiveTab }) => {
-  const marketplaceBg = "https://lh3.googleusercontent.com/aida-public/AB6AXuDBjdyR5YXvvvK64tBeA33T9r5-nw8BWpxQPWvSnmx-6eDMhyhAw1hCRfpjfAXJEegjnxLSgN_nW8MnPzb5cDKankaP-lxguIKdLv5vDz32XTzFDCYE29fq5Zp0G_YdiDrkaoy1c140f1m1U6ttCmG_xAN8V_LdBs4j0QO_5raM8vQTsiZZEnILqH6d3YLvTFLdFZWzt23MVXMb9pu9nLqgs7Hb386Q5k_FT9gNBXvUvRLVl--6ryFI4qJqAE_BtIuH0sU";
+const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
+  const [isDark, setIsDark] = useState(() => 
+    isDarkModeProp !== undefined ? isDarkModeProp : (typeof document !== 'undefined' && document.documentElement.classList.contains('dark'))
+  );
+
+  useEffect(() => {
+    const checkDark = () => {
+      if (typeof document !== 'undefined') {
+        setIsDark(document.documentElement.classList.contains('dark'));
+      }
+    };
+    checkDark();
+    const observer = new MutationObserver(checkDark);
+    if (typeof document !== 'undefined') {
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  const activeDarkMode = isDarkModeProp !== undefined ? isDarkModeProp : isDark;
+  const marketplaceBg = activeDarkMode ? heroDarkAsset : heroLightAsset;
 
   const handleSelectPlan = (planName) => {
-    setActiveTab('contact');
+    if (setActiveTab) setActiveTab('contact');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
