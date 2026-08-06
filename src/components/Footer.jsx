@@ -168,16 +168,16 @@ const Footer = ({ setActiveTab }) => {
             <h3 className="font-label-caps text-label-caps text-secondary mb-6 tracking-widest uppercase">Resources</h3>
             <ul className="space-y-4">
               <li>
-                <a href="#privacy" className="font-body-md text-body-md text-on-surface-variant/80 hover:text-white transition-colors relative group block">
+                <button onClick={() => handleNavigate('privacy')} className="font-body-md text-body-md text-on-surface-variant/80 hover:text-white transition-colors relative group block text-left">
                   Privacy Policy
                   <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-secondary transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#terms" className="font-body-md text-body-md text-on-surface-variant/80 hover:text-white transition-colors relative group block">
+                <button onClick={() => handleNavigate('privacy')} className="font-body-md text-body-md text-on-surface-variant/80 hover:text-white transition-colors relative group block text-left">
                   Terms & Conditions
                   <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-secondary transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </button>
               </li>
             </ul>
           </div>
