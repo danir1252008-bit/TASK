@@ -10,17 +10,25 @@ import TermsPage from './pages/TermsPage';
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('task_theme');
+      if (savedTheme) return savedTheme === 'dark';
+    }
+    return false; // Default to Light Mode on first visit!
+  });
 
   React.useEffect(() => {
-    const updateMode = () => {
-      setIsDarkMode(document.documentElement.classList.contains('dark'));
-    };
-    updateMode();
-    const observer = new MutationObserver(updateMode);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+      localStorage.setItem('task_theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+      localStorage.setItem('task_theme', 'light');
+    }
+  }, [isDarkMode]);
 
   return (
     <div className="bg-background text-on-background min-h-screen relative overflow-x-hidden flex flex-col font-body-md text-body-md">

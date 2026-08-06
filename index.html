@@ -1,6 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="light scroll-smooth">
 <head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('task_theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TASK - The Sunset Gateway & Digital Marketplace</title>
@@ -1790,7 +1802,23 @@
     // --- Main App Root ---
     const App = () => {
       const [activeTab, setActiveTab] = useState('home');
-      const [isDarkMode, setIsDarkMode] = useState(true);
+      const [isDarkMode, setIsDarkMode] = useState(() => {
+        const savedTheme = localStorage.getItem('task_theme');
+        if (savedTheme) return savedTheme === 'dark';
+        return false; // Default to Light Mode on first visit!
+      });
+
+      useEffect(() => {
+        if (isDarkMode) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+          localStorage.setItem('task_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+          localStorage.setItem('task_theme', 'light');
+        }
+      }, [isDarkMode]);
 
       return (
         <div className="bg-background text-on-background min-h-screen relative overflow-x-hidden flex flex-col font-body-md text-body-md">
