@@ -1,12 +1,12 @@
 import React from 'react';
 import coachingImg from '../assets/xyz-coaching.png';
+import coachingMobileImg from '../assets/xyz-coaching-mobile.png';
 import heroBgImg from '../assets/Hero Page.png';
 
 const PortfolioPage = ({ setActiveTab }) => {
   // Use Hero Page.png as background picture with soft blur and dark mode overlay
   const bgImg = heroBgImg;
   
-  const auraImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuDHoQtvXbyygjQPgwGl7-A1x-J-jFyftEV7sZpCrpWwQl2FtPi1Eh3yQFNFXwGW62CliS_JY_cdgoyinKa19OelZ4wqwRNab6PRePsRzI54USiA_UU0Lnt4vSRRTwKpSIV_sJ6H92CJyMZ66_8xzmBE6QJNq2TMmxyCMBaNMpaIYveDB3cTyD1VTeo3xMDOByg2oo-Lg4n3_xNvru4uvcob2tX-mPZljxRBhNumMiZfU4bySt4juu6YxQ";
   const ironForgeImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuD_von0qDzG1oRNAFTgECMhGwysED7D5ifgazZFHIZ6aXWAAD1XJOm0Mi4PVQ__I7DU4_1RPSdaU5XmNMEnxIuB4qNeLbm4iuQHvuCzOViwJ1FJE3Gbss-2IyYTRAccthN8XRPk0Lez2FjTwFhOR6JgzvU5ARSwnkF5QdNCrpkfNtzXSoOcg72oCDUtSyYa6hIePVpdK-1ysjrOy4UUB6mWf3Q-UTwuqHJHspykBpIkgATjYp-V7rn8nQ";
 
   return (
@@ -84,14 +84,14 @@ const PortfolioPage = ({ setActiveTab }) => {
             </div>
           </div>
 
-          {/* Project 2: Aura Aesthetics */}
+          {/* Project 2: XYZ Coaching App */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-6 md:col-start-1 order-2 md:order-1 relative">
-              <div className="glass-panel rounded-xl overflow-hidden aspect-[4/3] relative border border-outline-variant/30 shadow-2xl group">
+              <div className="glass-panel rounded-xl overflow-hidden aspect-[4/3] relative border border-outline-variant/30 shadow-2xl group flex items-center justify-center p-2 bg-black/40">
                 <img 
-                  src={auraImg} 
-                  alt="Aura Aesthetics Mobile App" 
-                  className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                  src={coachingMobileImg} 
+                  alt="XYZ Coaching App Mobile Mockup" 
+                  className="max-h-full w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 rounded-lg" 
                 />
               </div>
             </div>
@@ -99,16 +99,16 @@ const PortfolioPage = ({ setActiveTab }) => {
             <div className="md:col-span-5 md:col-start-8 order-1 md:order-2 relative z-10">
               <div className="glass-panel p-8 rounded-xl glow-hover border border-secondary/30 bg-[#1c1b1b]/90 text-left md:text-right">
                 <div className="flex items-center gap-3 mb-4 md:justify-end">
-                  <span className="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">AURA</span>
-                  <span className="material-symbols-outlined text-tertiary">spa</span>
+                  <span className="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">XYZ MOBILE APP</span>
+                  <span className="material-symbols-outlined text-tertiary">smartphone</span>
                 </div>
-                <h2 className="font-headline-md text-headline-md text-on-surface mb-4">Aura Aesthetics</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface mb-4">XYZ Coaching App</h2>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-                  Redefining luxury beauty bookings through a seamless glassmorphic mobile & web interface that mirrors the serenity of physical spa sanctuary spaces.
+                  Redefining mobile learning with an intuitive, sleek interface designed for admissions, course tracking, and competitive exam preparation.
                 </p>
                 <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full border border-secondary/30 md:ml-auto">
-                  <span className="material-symbols-outlined text-sm">event_available</span>
-                  <span className="font-label-caps text-label-caps">FULLY BOOKED SLOTS</span>
+                  <span className="material-symbols-outlined text-sm">download</span>
+                  <span className="font-label-caps text-label-caps">50,000+ ACTIVE USERS</span>
                 </div>
               </div>
             </div>
