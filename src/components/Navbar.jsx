@@ -52,7 +52,7 @@ const Navbar = ({ activeTab, setActiveTab, isDarkMode, setIsDarkMode }) => {
   return (
     <>
       {/* Fixed Height Desktop Navigation Bar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 rounded-full mx-auto max-w-[75%] w-full h-12 border border-secondary/20 shadow-[0_4px_24px_0_rgba(175,141,17,0.1)] hidden md:flex bg-surface-container-low/90 backdrop-blur-md mt-2 transition-all duration-300">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 rounded-full mx-auto max-w-[80%] w-full h-12 border border-secondary/20 shadow-[0_4px_24px_0_rgba(175,141,17,0.1)] hidden md:flex bg-surface-container-low/90 backdrop-blur-md mt-2 transition-all duration-300 relative">
         <div 
           className="cursor-pointer flex items-center gap-2 relative z-10"
           onClick={() => handleNavClick('home')}
@@ -65,7 +65,8 @@ const Navbar = ({ activeTab, setActiveTab, isDarkMode, setIsDarkMode }) => {
           />
         </div>
 
-        <div className="flex items-center space-x-6">
+        {/* Mathematically Centered Navigation Links */}
+        <div className="absolute left-1/2 -translate-x-1/2 flex items-center space-x-8">
           <button 
             onClick={() => handleNavClick('home')}
             className={`font-button-text text-sm transition-all ${
@@ -100,7 +101,7 @@ const Navbar = ({ activeTab, setActiveTab, isDarkMode, setIsDarkMode }) => {
           </button>
         </div>
 
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 relative z-10">
           {/* Theme Toggle Button */}
           <ThemeToggle />
 
