@@ -35,18 +35,18 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
     <main className="relative z-20">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col justify-center items-center px-container-padding-mobile md:px-container-padding-desktop relative pt-32 pb-section-gap">
-        {/* Background Image Layer with Shadow Overlay behind Text */}
-        <div className="absolute inset-0 z-[-1] overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-background z-10"></div>
-          <div className="absolute inset-0 bg-radial from-black/60 via-black/20 to-transparent z-10 pointer-events-none"></div>
+        {/* Background Image Layer with Shadow Overlay behind Text (Extending behind Nav) */}
+        <div className="absolute -top-32 inset-x-0 bottom-0 z-[-1] overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-background z-10"></div>
+          <div className="absolute inset-0 bg-radial from-black/40 via-transparent to-transparent z-10 pointer-events-none"></div>
           <img 
             alt="The Sunset Gateway - Light Scene" 
-            className="absolute inset-0 w-full h-full object-cover object-center opacity-100 pointer-events-none" 
+            className="absolute inset-0 w-full h-full object-cover object-top opacity-100 pointer-events-none" 
             src={heroLightAsset} 
           />
           <img 
             alt="The Sunset Gateway - Dark Scene" 
-            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ease-in-out pointer-events-none ${
+            className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500 ease-in-out pointer-events-none ${
               activeDarkMode ? 'opacity-100' : 'opacity-0'
             }`} 
             src={heroDarkAsset} 
