@@ -104,15 +104,13 @@ const ContactPage = ({ isDarkMode: isDarkModeProp }) => {
         <div className="absolute inset-0 bg-gradient-radial from-primary-container/20 via-background/80 to-background z-20"></div>
         <img 
           alt="Light Marketplace Background" 
-          className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transition-opacity duration-700 ease-in-out ${
-            activeDarkMode ? 'opacity-0' : 'opacity-40'
-          }`} 
+          className="absolute inset-0 w-full h-full object-cover object-center scale-105 opacity-40 pointer-events-none" 
           src={heroLightAsset} 
         />
         <img 
           alt="Dark Marketplace Background" 
-          className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transition-opacity duration-700 ease-in-out ${
-            activeDarkMode ? 'opacity-40' : 'opacity-0'
+          className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${
+            activeDarkMode ? 'opacity-100' : 'opacity-0'
           }`} 
           src={heroDarkAsset} 
         />

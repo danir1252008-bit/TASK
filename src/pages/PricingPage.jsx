@@ -35,15 +35,13 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
       <header className="relative w-full min-h-[75vh] flex items-center justify-center pt-24 overflow-hidden z-10">
         <div className="absolute inset-0 z-0">
           <img 
-            className={`absolute inset-0 w-full h-[120vh] object-cover object-top mix-blend-luminosity transform -translate-y-20 transition-opacity duration-700 ease-in-out ${
-              activeDarkMode ? 'opacity-0' : 'opacity-30'
-            }`} 
+            className="absolute inset-0 w-full h-[120vh] object-cover object-top mix-blend-luminosity transform -translate-y-20 opacity-30 pointer-events-none" 
             alt="Light Marketplace Scene" 
             src={heroLightAsset} 
           />
           <img 
-            className={`absolute inset-0 w-full h-[120vh] object-cover object-top mix-blend-luminosity transform -translate-y-20 transition-opacity duration-700 ease-in-out ${
-              activeDarkMode ? 'opacity-30' : 'opacity-0'
+            className={`absolute inset-0 w-full h-[120vh] object-cover object-top mix-blend-luminosity transform -translate-y-20 transition-opacity duration-500 ease-in-out pointer-events-none ${
+              activeDarkMode ? 'opacity-100' : 'opacity-0'
             }`} 
             alt="Dark Marketplace Scene" 
             src={heroDarkAsset} 
