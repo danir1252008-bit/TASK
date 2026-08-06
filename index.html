@@ -231,6 +231,152 @@
       border: 1px solid rgba(233, 195, 73, 0.2);
     }
     ::-webkit-scrollbar-thumb:hover { background: #af8d11; }
+
+    /* From Uiverse.io by prikshit_1236 */ 
+    .theme-toggle-wrapper {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      transition: 0.6s ease-in-out;
+      font-family: "Arial", sans-serif;
+    }
+
+    .theme-toggle-wrapper .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 80px;
+      height: 40px;
+      transform: scale(0.65);
+      transform-origin: center center;
+      transition: transform 0.2s;
+    }
+
+    .theme-toggle-wrapper .toggle-switch:hover {
+      transform: scale(0.72);
+    }
+
+    .theme-toggle-wrapper .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .theme-toggle-wrapper .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(145deg, #f1c40f, #f39c12);
+      transition: 0.4s;
+      border-radius: 34px;
+      box-shadow: 0 0 15px rgba(241, 196, 15, 0.5);
+    }
+
+    .theme-toggle-wrapper .slider:before {
+      position: absolute;
+      content: "☀️";
+      height: 32px;
+      width: 32px;
+      left: 4px;
+      bottom: 4px;
+      background: white;
+      transition: 0.4s;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .theme-toggle-wrapper input:checked + .slider {
+      background: linear-gradient(145deg, #2c3e50, #34495e);
+      box-shadow: 0 0 15px rgba(44, 62, 80, 0.5);
+    }
+
+    .theme-toggle-wrapper input:checked + .slider:before {
+      transform: translateX(40px);
+      content: "🌙";
+    }
+
+    .theme-toggle-wrapper .clouds {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .theme-toggle-wrapper .cloud {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      fill: rgba(255, 255, 255, 0.8);
+      transition: all 0.4s ease;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+    }
+
+    .theme-toggle-wrapper .cloud1 {
+      top: 10px;
+      left: 10px;
+      animation: floatCloud1 8s infinite linear;
+    }
+
+    .theme-toggle-wrapper .cloud2 {
+      top: 15px;
+      left: 40px;
+      transform: scale(0.8);
+      animation: floatCloud2 12s infinite linear;
+    }
+
+    @keyframes floatCloud1 {
+      0% {
+        transform: translateX(-20px);
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(80px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes floatCloud2 {
+      0% {
+        transform: translateX(-20px) scale(0.8);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.7;
+      }
+      80% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateX(80px) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    .theme-toggle-wrapper input:checked + .slider .cloud {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .theme-toggle-wrapper .cloud {
+        animation: none;
+      }
+    }
   </style>
 </head>
 <body class="bg-background text-on-background antialiased min-h-screen relative selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
@@ -284,8 +430,38 @@
       };
 
       const handleToggleTheme = () => {
-        if (setIsDarkMode) setIsDarkMode(!isDarkMode);
+        const nextMode = !isDarkMode;
+        if (setIsDarkMode) setIsDarkMode(nextMode);
+        if (nextMode) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        }
       };
+
+      const ThemeToggle = () => (
+        <div className="theme-toggle-wrapper">
+          <label className="toggle-switch" title="Toggle Light / Dark Mode">
+            <input 
+              type="checkbox" 
+              checked={!!isDarkMode} 
+              onChange={handleToggleTheme} 
+            />
+            <span className="slider">
+              <span className="clouds">
+                <svg className="cloud cloud1" viewBox="0 0 24 24">
+                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+                </svg>
+                <svg className="cloud cloud2" viewBox="0 0 24 24">
+                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+                </svg>
+              </span>
+            </span>
+          </label>
+        </div>
+      );
 
       return (
         <>
@@ -312,17 +488,7 @@
             </div>
 
             <div className="flex items-center space-x-3">
-              {/* Scaled Uiverse Switch */}
-              <div className="flex items-center transform scale-[0.38] origin-center -mx-10 cursor-pointer">
-                <input 
-                  type="checkbox" 
-                  id="switch-desktop" 
-                  className="switch-input"
-                  checked={!!isDarkMode} 
-                  onChange={handleToggleTheme} 
-                />
-                <label htmlFor="switch-desktop" className="switch" title="Toggle Dark/Light Mode"></label>
-              </div>
+              <ThemeToggle />
 
               <a 
                 href={whatsappUrl}
@@ -342,16 +508,7 @@
             </div>
 
             <div className="flex items-center gap-1">
-              <div className="flex items-center transform scale-[0.32] origin-center -mx-12 cursor-pointer">
-                <input 
-                  type="checkbox" 
-                  id="switch-mobile" 
-                  className="switch-input"
-                  checked={!!isDarkMode} 
-                  onChange={handleToggleTheme} 
-                />
-                <label htmlFor="switch-mobile" className="switch" title="Toggle Dark/Light Mode"></label>
-              </div>
+              <ThemeToggle />
 
               <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-secondary p-1 focus:outline-none">
                 <span className="material-symbols-outlined text-2xl">{mobileMenuOpen ? 'close' : 'menu'}</span>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Navbar = ({ activeTab, setActiveTab }) => {
+const Navbar = ({ activeTab, setActiveTab, isDarkMode, setIsDarkMode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const logoSrc = "https://lh3.googleusercontent.com/aida-public/AB6AXuAOn2QRGn-BG4x5vuubQ-4M2dIB7N930LKtPmOXJBOE48bCXvuRekAGtjBruiBoJGdsQMgQ4PppE2YqmNux6nRDR53HIG0zBSgRvJrhCxmCqRSXOwfKqc3LrD8W9Wf7WwYs6veYbCRtqvOcvgRIb84qWr9SFWcyivT7PscGfX343QDDwi9xFvK0Pdy2dYJ7Duc5mp3Ij3OTCHoM3-ozZncK61O0yX-uyP4RSztCN-wSxrvzVF-Hn-32XFnop2EprH5HEZA";
@@ -12,6 +12,42 @@ const Navbar = ({ activeTab, setActiveTab }) => {
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const handleToggleTheme = () => {
+    const nextMode = !isDarkMode;
+    if (setIsDarkMode) {
+      setIsDarkMode(nextMode);
+    }
+    if (nextMode) {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    }
+  };
+
+  const ThemeToggle = () => (
+    <div className="theme-toggle-wrapper">
+      <label className="toggle-switch" title="Toggle Light / Dark Mode">
+        <input 
+          type="checkbox" 
+          checked={!!isDarkMode} 
+          onChange={handleToggleTheme} 
+        />
+        <span className="slider">
+          <span className="clouds">
+            <svg className="cloud cloud1" viewBox="0 0 24 24">
+              <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+            </svg>
+            <svg className="cloud cloud2" viewBox="0 0 24 24">
+              <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+            </svg>
+          </span>
+        </span>
+      </label>
+    </div>
+  );
 
   return (
     <>
@@ -64,15 +100,20 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           </button>
         </div>
 
-        {/* WhatsApp Reach Us Button */}
-        <a 
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-primary-container text-on-primary-container font-button-text text-xs px-5 py-1.5 rounded-lg hover:border hover:border-secondary transition-all crimson-glow hover:scale-105 active:scale-95 font-bold tracking-wider inline-block text-center"
-        >
-          Reach Us
-        </a>
+        <div className="flex items-center space-x-3">
+          {/* Theme Toggle Button */}
+          <ThemeToggle />
+
+          {/* WhatsApp Reach Us Button */}
+          <a 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary-container text-on-primary-container font-button-text text-xs px-5 py-1.5 rounded-lg hover:border hover:border-secondary transition-all crimson-glow hover:scale-105 active:scale-95 font-bold tracking-wider inline-block text-center"
+          >
+            Reach Us
+          </a>
+        </div>
       </nav>
 
       {/* Fixed Height Mobile Navigation Header */}
@@ -88,14 +129,19 @@ const Navbar = ({ activeTab, setActiveTab }) => {
             style={{ maxHeight: '48px', width: 'auto' }}
           />
         </div>
-        <button 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="text-secondary p-1 focus:outline-none"
-        >
-          <span className="material-symbols-outlined text-2xl">
-            {mobileMenuOpen ? 'close' : 'menu'}
-          </span>
-        </button>
+        <div className="flex items-center space-x-2">
+          {/* Mobile Theme Toggle Button */}
+          <ThemeToggle />
+
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-secondary p-1 focus:outline-none"
+          >
+            <span className="material-symbols-outlined text-2xl">
+              {mobileMenuOpen ? 'close' : 'menu'}
+            </span>
+          </button>
+        </div>
       </header>
 
       {/* Mobile Menu Dropdown */}
