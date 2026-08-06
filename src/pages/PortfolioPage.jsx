@@ -1,13 +1,12 @@
 import React from 'react';
 import coachingImg from '../assets/xyz-coaching.png';
 import coachingMobileImg from '../assets/xyz-coaching-mobile.png';
+import jewelryImg from '../assets/xyz-jewelry.jpg';
 import heroBgImg from '../assets/Hero Page.png';
 
 const PortfolioPage = ({ setActiveTab }) => {
   // Use Hero Page.png as background picture with soft blur and dark mode overlay
   const bgImg = heroBgImg;
-  
-  const ironForgeImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuD_von0qDzG1oRNAFTgECMhGwysED7D5ifgazZFHIZ6aXWAAD1XJOm0Mi4PVQ__I7DU4_1RPSdaU5XmNMEnxIuB4qNeLbm4iuQHvuCzOViwJ1FJE3Gbss-2IyYTRAccthN8XRPk0Lez2FjTwFhOR6JgzvU5ARSwnkF5QdNCrpkfNtzXSoOcg72oCDUtSyYa6hIePVpdK-1ysjrOy4UUB6mWf3Q-UTwuqHJHspykBpIkgATjYp-V7rn8nQ";
 
   return (
     <div className="relative min-h-screen bg-background">
@@ -114,21 +113,21 @@ const PortfolioPage = ({ setActiveTab }) => {
             </div>
           </div>
 
-          {/* Project 3: Iron Forge Fitness */}
+          {/* Project 3: XYZ Jewelry */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-5 md:col-start-1">
               <div className="glass-panel p-8 rounded-xl glow-hover border border-secondary/30 bg-[#1c1b1b]/90">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="material-symbols-outlined text-primary">fitness_center</span>
-                  <span className="font-label-caps text-label-caps text-primary tracking-widest uppercase">IRON FORGE</span>
+                  <span className="material-symbols-outlined text-secondary">diamond</span>
+                  <span className="font-label-caps text-label-caps text-secondary tracking-widest uppercase">XYZ JEWELRY</span>
                 </div>
-                <h2 className="font-headline-md text-headline-md text-on-surface mb-4">Iron Forge Fitness</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface mb-4">XYZ Jewelry</h2>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-                  A high-contrast, data-dense dashboard built for community engagement and member tracking. Industrial strength meets digital precision.
+                  A luxury e-commerce experience crafted for bespoke, timeless, and everyday luxury jewelry collections.
                 </p>
                 <div className="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-1.5 rounded-full border border-primary/30">
-                  <span className="material-symbols-outlined text-sm">monitoring</span>
-                  <span className="font-label-caps text-label-caps">4.8X USER ENGAGEMENT</span>
+                  <span className="material-symbols-outlined text-sm">trending_up</span>
+                  <span className="font-label-caps text-label-caps">+350% ONLINE SALES</span>
                 </div>
               </div>
             </div>
@@ -136,9 +135,9 @@ const PortfolioPage = ({ setActiveTab }) => {
             <div className="md:col-span-6 md:col-start-7 relative">
               <div className="glass-panel rounded-xl overflow-hidden aspect-video relative border border-outline-variant/30 shadow-2xl group">
                 <img 
-                  src={ironForgeImg} 
-                  alt="Iron Forge Dashboard" 
-                  className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                  src={jewelryImg} 
+                  alt="XYZ Jewelry Web Experience" 
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
                 />
               </div>
             </div>
