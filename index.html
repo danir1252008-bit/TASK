@@ -611,7 +611,7 @@
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { title: "The Jewelers Loom", tag: "E-Commerce", desc: "A tactile, immersive shopping experience for handcrafted heritage jewelry.", img: portfolio1 },
+                { title: "XYZ Coaching Centre", tag: "Education", desc: "A high-converting educational portal and exam preparation platform.", img: "./xyz-coaching.png" },
                 { title: "Studio Sandstone", tag: "Architecture", desc: "Spatial storytelling translated into a dynamic web architecture portfolio.", img: portfolio2 },
                 { title: "Crimson Dusk", tag: "Branding", desc: "A sensory branding journey built with fluid micro-interactions and depth.", img: portfolio3 }
               ].map((item, idx) => (
@@ -644,7 +644,7 @@
     // --- Portfolio Page Component ---
     const PortfolioPage = ({ setActiveTab }) => {
       const bgImg = "./Hero Page.png";
-      const culinaryImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuBr4pErAF-EZjlUc1-ddrwyvb6960TvyKYuefNSn-g_FIGb_0mD2pnh3ZvUW5E3cyCrH_olLRC_VzPAlh7Tpo7dK_f96JLzG5UwlwqJTckHtUlZWL9hFguDm29FnihPgqOkuJvQZIJ_E43ZG8eZCoFlINv26iHHKTLTqb-lrOCYJLkb0Dt1l54-Cro0-Srvh_0N4qdGpTe4noFM4I8s7xaIK0jCsz_t-11PldVhqLsN8t3GejCUh53Ivw";
+      const coachingImg = "./xyz-coaching.png";
       const auraImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuDHoQtvXbyygjQPgwGl7-A1x-J-jFyftEV7sZpCrpWwQl2FtPi1Eh3yQFNFXwGW62CliS_JY_cdgoyinKa19OelZ4wqwRNab6PRePsRzI54USiA_UU0Lnt4vSRRTwKpSIV_sJ6H92CJyMZ66_8xzmBE6QJNq2TMmxyCMBaNMpaIYveDB3cTyD1VTeo3xMDOByg2oo-Lg4n3_xNvru4uvcob2tX-mPZljxRBhNumMiZfU4bySt4juu6YxQ";
       const ironForgeImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuD_von0qDzG1oRNAFTgECMhGwysED7D5ifgazZFHIZ6aXWAAD1XJOm0Mi4PVQ__I7DU4_1RPSdaU5XmNMEnxIuB4qNeLbm4iuQHvuCzOViwJ1FJE3Gbss-2IyYTRAccthN8XRPk0Lez2FjTwFhOR6JgzvU5ARSwnkF5QdNCrpkfNtzXSoOcg72oCDUtSyYa6hIePVpdK-1ysjrOy4UUB6mWf3Q-UTwuqHJHspykBpIkgATjYp-V7rn8nQ";
 
@@ -686,28 +686,28 @@
             <section className="max-w-[1440px] mx-auto px-container-padding-mobile md:px-container-padding-desktop space-y-24 relative">
               <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-secondary/20 to-transparent -translate-x-1/2 z-0 hidden md:block"></div>
 
-              {/* Project 1 */}
+              {/* Project 1: XYZ Coaching Centre */}
               <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 <div className="md:col-span-5 md:col-start-1">
                   <div className="glass-panel p-8 rounded-xl glow-hover border border-secondary/20">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="material-symbols-outlined text-secondary">restaurant</span>
-                      <span className="font-label-caps text-label-caps text-secondary tracking-widest uppercase">THE SPICE ROUTE</span>
+                      <span className="material-symbols-outlined text-secondary">school</span>
+                      <span className="font-label-caps text-label-caps text-secondary tracking-widest uppercase">XYZ COACHING</span>
                     </div>
-                    <h2 className="font-headline-md text-headline-md text-on-surface mb-4">The Culinary Hub</h2>
+                    <h2 className="font-headline-md text-headline-md text-on-surface mb-4">XYZ Coaching Centre</h2>
                     <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-                      A sensory digital experience that brought the vibrant flavors of traditional cuisine to a global audience, increasing online orders exponentially.
+                      A high-converting educational portal and exam preparation platform designed to empower students and showcase top rankers across competitive exams.
                     </p>
                     <div className="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-1.5 rounded-full border border-primary/30">
                       <span className="material-symbols-outlined text-sm">trending_up</span>
-                      <span className="font-label-caps text-label-caps">+200% ONLINE ORDERS</span>
+                      <span className="font-label-caps text-label-caps">150+ TOP RANKERS</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="md:col-span-6 md:col-start-7 relative">
                   <div className="glass-panel rounded-xl overflow-hidden aspect-video relative border border-outline-variant/30 shadow-2xl group">
-                    <img src={culinaryImg} alt="The Culinary Hub" className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+                    <img src={coachingImg} alt="XYZ Coaching Centre Mockup" className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                   </div>
                 </div>
               </div>
