@@ -1,10 +1,11 @@
 import React from 'react';
+import coachingImg from '../assets/xyz-coaching.png';
+import heroBgImg from '../assets/Hero Page.png';
 
 const PortfolioPage = ({ setActiveTab }) => {
   // Use Hero Page.png as background picture with soft blur and dark mode overlay
-  const bgImg = "./Hero Page.png";
+  const bgImg = heroBgImg;
   
-  const coachingImg = "./xyz-coaching.png";
   const auraImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuDHoQtvXbyygjQPgwGl7-A1x-J-jFyftEV7sZpCrpWwQl2FtPi1Eh3yQFNFXwGW62CliS_JY_cdgoyinKa19OelZ4wqwRNab6PRePsRzI54USiA_UU0Lnt4vSRRTwKpSIV_sJ6H92CJyMZ66_8xzmBE6QJNq2TMmxyCMBaNMpaIYveDB3cTyD1VTeo3xMDOByg2oo-Lg4n3_xNvru4uvcob2tX-mPZljxRBhNumMiZfU4bySt4juu6YxQ";
   const ironForgeImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuD_von0qDzG1oRNAFTgECMhGwysED7D5ifgazZFHIZ6aXWAAD1XJOm0Mi4PVQ__I7DU4_1RPSdaU5XmNMEnxIuB4qNeLbm4iuQHvuCzOViwJ1FJE3Gbss-2IyYTRAccthN8XRPk0Lez2FjTwFhOR6JgzvU5ARSwnkF5QdNCrpkfNtzXSoOcg72oCDUtSyYa6hIePVpdK-1ysjrOy4UUB6mWf3Q-UTwuqHJHspykBpIkgATjYp-V7rn8nQ";
 

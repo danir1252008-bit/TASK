@@ -1,8 +1,9 @@
 import React from 'react';
+import heroImgAsset from '../assets/Hero Page.png';
 
 const HomePage = ({ setActiveTab }) => {
   // Provided Hero Page image from workspace
-  const heroImg = "./Hero Page.png";
+  const heroImg = heroImgAsset;
   
   const artisanImg1 = "https://lh3.googleusercontent.com/aida-public/AB6AXuCHiB6q779wKd6u6KX7NzPYVPtK4tFRDmimWkVIrjY4BfInDGBUYTxQv5Tsutn9stdCfd1uhprI8taMus81dNCZghxTrPVfrc0rf58KNxmuseoN1dAhn6cF4yE-WwzvpOQPTkuaLBIdOERhBshLB-sdqe8VAYV858L5n0HrA-57cLOAWKzLOCVBkuh70Yg_gIuRPzyiiAEbTxc_A-jV-eIda4stlUs32bs2M0uvNpMQvNagVYa75emLyg";
   const artisanImg2 = "https://lh3.googleusercontent.com/aida-public/AB6AXuDbYo5xNefhakLNHPC80VqZN882X8_LUe-wq8lV48rD0u6cvqAxym-0He-0aSeiVRqLPQAxB7f6udfCWY_H8mXC_kQjNuJtMwYth6Il9VkBvCRUbqIfS2tQb1aVsZPTES-SIltwHzP7Gt9AHwDHuUX7U77QRUsOlr6V4m22-4oq_EePm9RdxN4LU1qA_0nQoon-wOFjKucR3K9RFH1uGTbbEDjwpV9RQxw0c8ccS_BUU8K-ZzHsd3qQ3A";
