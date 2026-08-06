@@ -6,6 +6,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import PricingPage from './pages/PricingPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsPage from './pages/TermsPage';
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -36,6 +37,7 @@ function App() {
         {activeTab === 'pricing' && <PricingPage setActiveTab={setActiveTab} isDarkMode={isDarkMode} />}
         {activeTab === 'contact' && <ContactPage setActiveTab={setActiveTab} isDarkMode={isDarkMode} />}
         {activeTab === 'privacy' && <PrivacyPolicyPage setActiveTab={setActiveTab} isDarkMode={isDarkMode} />}
+        {activeTab === 'terms' && <TermsPage setActiveTab={setActiveTab} isDarkMode={isDarkMode} />}
       </div>
 
       {/* Shared Footer */}

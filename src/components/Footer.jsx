@@ -174,7 +174,7 @@ const Footer = ({ setActiveTab }) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('privacy')} className="font-body-md text-body-md text-on-surface-variant/80 hover:text-white transition-colors relative group block text-left">
+                <button onClick={() => handleNavigate('terms')} className="font-body-md text-body-md text-on-surface-variant/80 hover:text-white transition-colors relative group block text-left">
                   Terms & Conditions
                   <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-secondary transition-all duration-300 group-hover:w-full"></span>
                 </button>
