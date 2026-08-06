@@ -35,11 +35,20 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
       <header className="relative w-full min-h-[75vh] flex items-center justify-center pt-24 overflow-hidden z-10">
         <div className="absolute inset-0 z-0">
           <img 
-            className="w-full h-[120vh] object-cover object-top opacity-30 mix-blend-luminosity transform -translate-y-20" 
-            alt="Vibrant traditional marketplace dusk" 
-            src={marketplaceBg} 
+            className={`absolute inset-0 w-full h-[120vh] object-cover object-top mix-blend-luminosity transform -translate-y-20 transition-opacity duration-700 ease-in-out ${
+              activeDarkMode ? 'opacity-0' : 'opacity-30'
+            }`} 
+            alt="Light Marketplace Scene" 
+            src={heroLightAsset} 
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
+          <img 
+            className={`absolute inset-0 w-full h-[120vh] object-cover object-top mix-blend-luminosity transform -translate-y-20 transition-opacity duration-700 ease-in-out ${
+              activeDarkMode ? 'opacity-30' : 'opacity-0'
+            }`} 
+            alt="Dark Marketplace Scene" 
+            src={heroDarkAsset} 
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background z-10"></div>
         </div>
 
         {/* Floating Animated Lanterns */}

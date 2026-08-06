@@ -40,9 +40,18 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-background z-10"></div>
           <div className="absolute inset-0 bg-radial from-black/60 via-black/20 to-transparent z-10 pointer-events-none"></div>
           <img 
-            alt="The Sunset Gateway - TASK Marketplace" 
-            className="w-full h-full object-cover opacity-95 object-center scale-105 transform transition-transform duration-1000 ease-out" 
-            src={heroImg} 
+            alt="The Sunset Gateway - Light Scene" 
+            className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transform transition-opacity duration-700 ease-in-out ${
+              activeDarkMode ? 'opacity-0' : 'opacity-95'
+            }`} 
+            src={heroLightAsset} 
+          />
+          <img 
+            alt="The Sunset Gateway - Dark Scene" 
+            className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transform transition-opacity duration-700 ease-in-out ${
+              activeDarkMode ? 'opacity-95' : 'opacity-0'
+            }`} 
+            src={heroDarkAsset} 
           />
         </div>
         

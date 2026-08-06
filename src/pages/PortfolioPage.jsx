@@ -29,13 +29,22 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
 
   return (
     <div className="relative min-h-screen bg-background">
-      {/* Visible Fixed Dark Mode Blurred Background Image */}
+      {/* Visible Fixed Blurred Background Image */}
       <div className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-background z-10"></div>
         <img 
+          alt="Light Blurred Marketplace Background" 
+          className={`absolute inset-0 w-full h-full object-cover object-center blur-[8px] scale-105 transition-opacity duration-700 ease-in-out ${
+            activeDarkMode ? 'opacity-0' : 'opacity-70'
+          }`} 
+          src={heroLightAsset} 
+        />
+        <img 
           alt="Dark Blurred Marketplace Background" 
-          className="w-full h-full object-cover object-center opacity-70 blur-[8px] scale-105" 
-          src={bgImg} 
+          className={`absolute inset-0 w-full h-full object-cover object-center blur-[8px] scale-105 transition-opacity duration-700 ease-in-out ${
+            activeDarkMode ? 'opacity-70' : 'opacity-0'
+          }`} 
+          src={heroDarkAsset} 
         />
       </div>
 
