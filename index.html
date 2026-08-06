@@ -717,8 +717,8 @@
             <div className="absolute inset-0 z-[-1] overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-background z-10"></div>
               <div className="absolute inset-0 bg-radial from-black/60 via-black/20 to-transparent z-10 pointer-events-none"></div>
-              <img alt="The Sunset Gateway - Light Scene" className="absolute inset-0 w-full h-full object-cover object-center scale-105 opacity-95 pointer-events-none" src="./Hero Page.png" />
-              <img alt="The Sunset Gateway - Dark Scene" className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} src="./hero-dark.jpg" />
+              <img alt="The Sunset Gateway - Light Scene" className="absolute inset-0 w-full h-full object-cover object-center opacity-100 pointer-events-none" src="./Hero Page.png" />
+              <img alt="The Sunset Gateway - Dark Scene" className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} src="./hero-dark.jpg" />
             </div>
             
             <div className="text-center max-w-4xl mx-auto p-4 relative z-10">
@@ -837,8 +837,8 @@
           {/* Visible Fixed Blurred Background Image */}
           <div className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
             <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-background z-10"></div>
-            <img alt="Light Blurred Marketplace Background" className="absolute inset-0 w-full h-full object-cover object-center blur-[8px] scale-105 opacity-70 pointer-events-none" src="./Hero Page.png" />
-            <img alt="Dark Blurred Marketplace Background" className={`absolute inset-0 w-full h-full object-cover object-center blur-[8px] scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} src="./hero-dark.jpg" />
+            <img alt="Light Marketplace Background" className="absolute inset-0 w-full h-full object-cover object-center opacity-85 pointer-events-none" src="./Hero Page.png" />
+            <img alt="Dark Marketplace Background" className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} src="./hero-dark.jpg" />
           </div>
 
           <main className="relative z-10 pt-32 pb-section-gap">
@@ -986,8 +986,8 @@
         <div className="relative min-h-screen bg-background text-on-surface">
           <header className="relative w-full min-h-[75vh] flex items-center justify-center pt-24 overflow-hidden z-10">
             <div className="absolute inset-0 z-0">
-              <img className="absolute inset-0 w-full h-[120vh] object-cover object-top mix-blend-luminosity transform -translate-y-20 opacity-30 pointer-events-none" alt="Light Marketplace dusk" src="./Hero Page.png" />
-              <img className={`absolute inset-0 w-full h-[120vh] object-cover object-top mix-blend-luminosity transform -translate-y-20 transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} alt="Dark Marketplace dusk" src="./hero-dark.jpg" />
+              <img className="absolute inset-0 w-full h-[120vh] object-cover object-top transform -translate-y-20 opacity-80 pointer-events-none" alt="Light Marketplace dusk" src="./Hero Page.png" />
+              <img className={`absolute inset-0 w-full h-[120vh] object-cover object-top transform -translate-y-20 transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} alt="Dark Marketplace dusk" src="./hero-dark.jpg" />
               <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background z-10"></div>
             </div>
 
@@ -1170,10 +1170,9 @@
       return (
         <main className="flex-grow relative flex items-center justify-center min-h-screen pt-32 pb-section-gap px-container-padding-mobile md:px-container-padding-desktop z-20">
           <div className="absolute inset-0 z-[-1] overflow-hidden">
-            <div className="absolute inset-0 bg-background/80 mix-blend-multiply z-10"></div>
-            <div className="absolute inset-0 bg-gradient-radial from-primary-container/20 via-background/80 to-background z-20"></div>
-            <img alt="Light Marketplace Background" className="absolute inset-0 w-full h-full object-cover object-center scale-105 opacity-40 pointer-events-none" src="./Hero Page.png" />
-            <img alt="Dark Marketplace Background" className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} src="./hero-dark.jpg" />
+            <div className="absolute inset-0 bg-background/50 z-10"></div>
+            <img alt="Light Marketplace Background" className="absolute inset-0 w-full h-full object-cover object-center opacity-85 pointer-events-none" src="./Hero Page.png" />
+            <img alt="Dark Marketplace Background" className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} src="./hero-dark.jpg" />
           </div>
 
           <div className="relative z-40 w-full max-w-2xl glass-panel rounded-[24px] p-8 md:p-12 ambient-glow border border-primary-container/30 overflow-hidden my-8">

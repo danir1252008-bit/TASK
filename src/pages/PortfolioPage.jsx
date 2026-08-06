@@ -33,13 +33,13 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
       <div className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-background z-10"></div>
         <img 
-          alt="Light Blurred Marketplace Background" 
-          className="absolute inset-0 w-full h-full object-cover object-center blur-[8px] scale-105 opacity-70 pointer-events-none" 
+          alt="Light Marketplace Background" 
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 pointer-events-none" 
           src={heroLightAsset} 
         />
         <img 
-          alt="Dark Blurred Marketplace Background" 
-          className={`absolute inset-0 w-full h-full object-cover object-center blur-[8px] scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${
+          alt="Dark Marketplace Background" 
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ease-in-out pointer-events-none ${
             activeDarkMode ? 'opacity-100' : 'opacity-0'
           }`} 
           src={heroDarkAsset} 

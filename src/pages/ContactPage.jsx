@@ -100,16 +100,15 @@ const ContactPage = ({ isDarkMode: isDarkModeProp }) => {
     <main className="flex-grow relative flex items-center justify-center min-h-screen pt-32 pb-section-gap px-container-padding-mobile md:px-container-padding-desktop z-20">
       {/* Background Layer */}
       <div className="absolute inset-0 z-[-1] overflow-hidden">
-        <div className="absolute inset-0 bg-background/80 mix-blend-multiply z-10"></div>
-        <div className="absolute inset-0 bg-gradient-radial from-primary-container/20 via-background/80 to-background z-20"></div>
+        <div className="absolute inset-0 bg-background/50 z-10"></div>
         <img 
           alt="Light Marketplace Background" 
-          className="absolute inset-0 w-full h-full object-cover object-center scale-105 opacity-40 pointer-events-none" 
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 pointer-events-none" 
           src={heroLightAsset} 
         />
         <img 
           alt="Dark Marketplace Background" 
-          className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ease-in-out pointer-events-none ${
             activeDarkMode ? 'opacity-100' : 'opacity-0'
           }`} 
           src={heroDarkAsset} 

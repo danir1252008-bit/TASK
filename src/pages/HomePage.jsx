@@ -41,12 +41,12 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
           <div className="absolute inset-0 bg-radial from-black/60 via-black/20 to-transparent z-10 pointer-events-none"></div>
           <img 
             alt="The Sunset Gateway - Light Scene" 
-            className="absolute inset-0 w-full h-full object-cover object-center scale-105 opacity-95 pointer-events-none" 
+            className="absolute inset-0 w-full h-full object-cover object-center opacity-100 pointer-events-none" 
             src={heroLightAsset} 
           />
           <img 
             alt="The Sunset Gateway - Dark Scene" 
-            className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ease-in-out pointer-events-none ${
               activeDarkMode ? 'opacity-100' : 'opacity-0'
             }`} 
             src={heroDarkAsset} 
