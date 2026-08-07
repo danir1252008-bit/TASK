@@ -29,8 +29,8 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
 
   return (
     <div className="relative min-h-screen bg-background">
-      {/* Visible Fixed Blurred Background Image */}
-      <div className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+      {/* Visible Stationary Background Image on Mobile, Fixed on Desktop */}
+      <div className="absolute md:fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-background z-10"></div>
         <img 
           alt="Light Marketplace Background" 
