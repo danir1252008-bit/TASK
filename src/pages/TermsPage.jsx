@@ -241,8 +241,8 @@ const TermsPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
               id={sec.id}
               className="solid-panel bg-[#121212]/90 backdrop-blur-md rounded-2xl p-6 md:p-10 border border-secondary/20 hover:border-primary/50 transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.5)] hover:shadow-[0_4px_30px_rgba(229,9,20,0.15)] group relative"
             >
-              {/* Elegant Section Number Badge */}
-              <div className="absolute top-6 right-6 font-headline-lg text-3xl md:text-4xl text-primary/15 font-bold pointer-events-none group-hover:text-primary/30 transition-colors">
+              {/* Elegant Section Number Badge (Desktop Only) */}
+              <div className="hidden md:block absolute top-6 right-6 font-headline-lg text-3xl md:text-4xl text-primary/15 font-bold pointer-events-none group-hover:text-primary/30 transition-colors">
                 {sec.num}
               </div>
 

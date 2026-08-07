@@ -1776,7 +1776,7 @@
             <div className="space-y-8">
               {termsSections.map((sec) => (
                 <div key={sec.id} id={sec.id} className="solid-panel bg-[#121212]/90 backdrop-blur-md rounded-2xl p-6 md:p-10 border border-secondary/20 hover:border-primary/50 transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.5)] hover:shadow-[0_4px_30px_rgba(229,9,20,0.15)] group relative">
-                  <div className="absolute top-6 right-6 font-headline-lg text-3xl md:text-4xl text-primary/15 font-bold pointer-events-none group-hover:text-primary/30 transition-colors">{sec.num}</div>
+                  <div className="hidden md:block absolute top-6 right-6 font-headline-lg text-3xl md:text-4xl text-primary/15 font-bold pointer-events-none group-hover:text-primary/30 transition-colors">{sec.num}</div>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                       <span className="material-symbols-outlined text-xl">{sec.icon}</span>
