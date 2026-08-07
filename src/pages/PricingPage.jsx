@@ -6,7 +6,7 @@ const BUSINESS_WEBSITE_PRICING = [
   {
     id: '1m',
     duration: '1 Month',
-    offerPrice: '₹799 / mo',
+    offerPrice: '₹799 / mos',
     priceVal: '₹799',
     unit: '/ month',
     regularPrice: '₹799',
@@ -69,7 +69,7 @@ const ECOMMERCE_WEBSITE_PRICING = [
   {
     id: '1m',
     duration: '1 Month',
-    offerPrice: '₹1,899 / mo',
+    offerPrice: '₹1,899 / mos',
     priceVal: '₹1,899',
     unit: '/ month',
     regularPrice: '₹1,899',
