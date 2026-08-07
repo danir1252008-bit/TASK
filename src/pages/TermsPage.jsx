@@ -208,12 +208,11 @@ const TermsPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
             Please read these Terms & Conditions carefully before using TASK's website or purchasing any of our web design, branding, and management services.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs font-label-caps text-on-surface-variant/70">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 md:gap-8 text-xs font-label-caps text-on-surface-variant/70">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
               BINDING LEGAL CONTRACT
             </span>
-            <span className="text-secondary/50">•</span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
               EFFECTIVE IMMEDIATELY

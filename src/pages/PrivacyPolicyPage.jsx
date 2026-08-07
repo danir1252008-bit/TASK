@@ -177,12 +177,11 @@ const PrivacyPolicyPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
             Your privacy matters. Learn how TASK collects, uses, stores, and protects your information across our digital ecosystem.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs font-label-caps text-on-surface-variant/70">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 md:gap-8 text-xs font-label-caps text-on-surface-variant/70">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
               GDPR & CCPA COMPLIANT
             </span>
-            <span className="text-secondary/50">•</span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
               256-BIT ENCRYPTION
