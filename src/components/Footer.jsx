@@ -80,12 +80,6 @@ const Footer = ({ setActiveTab }) => {
               >
                 <span className="material-symbols-outlined text-sm">mail</span> Taskfromindia@gmail.com
               </a>
-              <a 
-                href="tel:+919310040848" 
-                className="hover:text-secondary transition-colors flex items-center gap-2"
-              >
-                <span className="material-symbols-outlined text-sm">phone</span> +91 93100 40848
-              </a>
               <p className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm">location_on</span> Kolkata, India
               </p>
