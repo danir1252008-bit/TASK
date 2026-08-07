@@ -1,28 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FirefliesCanvas from './FirefliesCanvas';
 
 const Footer = ({ setActiveTab }) => {
+  const [showToast, setShowToast] = useState(false);
+  const [isSharing, setIsSharing] = useState(false);
+
   const handleNavigate = (tab) => {
     setActiveTab(tab);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleShare = (e) => {
+  const triggerToast = () => {
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 2800);
+  };
+
+  const fallbackCopyText = (text) => {
+    try {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    } catch (_) {}
+  };
+
+  const handleShare = async (e) => {
     if (e) e.preventDefault();
-    if (navigator.share) {
-      navigator.share({
-        title: 'TASK - Digital Marketplace & Craft',
-        text: 'Check out TASK - Where Digital Craft Meets Marketplace Chaos',
-        url: window.location.href
-      }).catch(() => {});
-    } else if (navigator.clipboard) {
-      navigator.clipboard.writeText(window.location.href).then(() => {
-        alert('Website link copied to clipboard!');
-      }).catch(() => {
-        alert('Share this link: ' + window.location.href);
-      });
-    } else {
-      alert('Share this link: ' + window.location.href);
+    if (isSharing) return;
+    setIsSharing(true);
+
+    const shareUrl = (typeof window !== 'undefined' && window.location.href) || '';
+    const shareTitle = (typeof document !== 'undefined' && document.title) || 'TASK — The Sunset Gateway & Digital Marketplace';
+    const shareText = 'Check out TASK — premium websites and branding for businesses.';
+
+    try {
+      if (typeof navigator !== 'undefined' && navigator.share) {
+        await navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: shareUrl,
+        });
+      } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
+        await navigator.clipboard.writeText(shareUrl);
+        triggerToast();
+      } else {
+        fallbackCopyText(shareUrl);
+        triggerToast();
+      }
+    } catch (err) {
+      if (err.name !== 'AbortError' && err.name !== 'NotAllowedError') {
+        try {
+          if (typeof navigator !== 'undefined' && navigator.clipboard) {
+            await navigator.clipboard.writeText(shareUrl);
+            triggerToast();
+          }
+        } catch (_) {}
+      }
+    } finally {
+      setIsSharing(false);
     }
   };
 
@@ -106,9 +145,23 @@ const Footer = ({ setActiveTab }) => {
             
             {/* Social Icons */}
             <div className="flex gap-4">
-              <button onClick={handleShare} title="Share Website" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30 cursor-pointer">
-                <span className="material-symbols-outlined text-[20px]">share</span>
-              </button>
+              <div className="relative inline-flex items-center">
+                <button 
+                  onClick={handleShare} 
+                  aria-label="Share TASK"
+                  title="Share TASK" 
+                  disabled={isSharing}
+                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30 cursor-pointer active:scale-95 disabled:opacity-50"
+                >
+                  <span className="material-symbols-outlined text-[20px]">share</span>
+                </button>
+                {showToast && (
+                  <div className="absolute bottom-12 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#1c1b1b]/95 text-secondary border border-secondary/40 text-xs px-3.5 py-1.5 rounded-full shadow-[0_0_20px_rgba(233,195,73,0.3)] backdrop-blur-md z-50 transition-opacity duration-300 flex items-center gap-1.5 pointer-events-none">
+                    <span className="material-symbols-outlined text-sm text-secondary">content_copy</span>
+                    <span>Link copied — share it anywhere.</span>
+                  </div>
+                )}
+              </div>
               <a href="#instagram" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30">
                 <span className="material-symbols-outlined text-[20px]">photo_camera</span>
               </a>
