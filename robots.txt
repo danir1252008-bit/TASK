@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://task-orpin-gamma.vercel.app/sitemap.xml
