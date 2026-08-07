@@ -101,7 +101,7 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
           </div>
 
           <div className="md:col-span-7 relative mt-8 md:mt-0">
-            <div className="bg-[#1c1b1b] border border-secondary/30 p-4 rounded-xl rotate-2 hover:rotate-0 transition-transform duration-500 shadow-2xl">
+            <div className="bg-[#1c1b1b] border border-secondary/30 p-4 rounded-xl rotate-0 md:rotate-2 md:hover:rotate-0 transition-transform duration-500 shadow-2xl">
               <img 
                 className="w-full h-auto rounded-lg object-cover" 
                 alt="Digital Artisan Workspace" 
