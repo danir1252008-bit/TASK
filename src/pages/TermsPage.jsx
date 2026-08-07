@@ -153,7 +153,7 @@ const TermsPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
       num: "13",
       icon: "account_balance",
       title: "Governing Law & Jurisdiction",
-      content: "These Terms & Conditions are governed by and construed in accordance with the laws of the operating jurisdiction of TASK Studio (West Bengal, India), without regard to its conflict of law principles. Any dispute arising under these terms shall be subject to exclusive jurisdiction of the competent courts in Kolkata, India."
+      content: "These Terms & Conditions are governed by and construed in accordance with the laws of the operating jurisdiction of TASK (West Bengal, India), without regard to its conflict of law principles. Any dispute arising under these terms shall be subject to exclusive jurisdiction of the competent courts in Kolkata, India."
     }
   ];
 
@@ -306,7 +306,7 @@ const TermsPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
               <div className="space-y-4">
                 <div>
                   <span className="font-label-caps text-xs text-secondary uppercase block mb-1">Company Name</span>
-                  <span className="font-headline-md text-lg text-white font-bold">TASK Studio</span>
+                  <span className="font-headline-md text-lg text-white font-bold">TASK</span>
                 </div>
                 <div>
                   <span className="font-label-caps text-xs text-secondary uppercase block mb-1">Legal & Billing Email</span>

@@ -217,7 +217,7 @@ const Footer = ({ setActiveTab }) => {
         {/* Bottom Credits & Status */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="font-label-caps text-label-caps text-on-surface-variant/60 text-center md:text-left">
-            © 2026 TASK Studio. Crafted with passion in India for businesses around the world.
+            © 2026 TASK. Crafted with passion in India for businesses around the world.
           </div>
           <div className="flex items-center gap-2 font-label-caps text-[10px] text-on-surface-variant/40 tracking-widest uppercase">
             <span>System Online</span>

@@ -247,7 +247,7 @@ const PrivacyPolicyPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
               <div className="space-y-4">
                 <div>
                   <span className="font-label-caps text-xs text-secondary uppercase block mb-1">Company Name</span>
-                  <span className="font-headline-md text-lg text-white font-bold">TASK Studio</span>
+                  <span className="font-headline-md text-lg text-white font-bold">TASK</span>
                 </div>
                 <div>
                   <span className="font-label-caps text-xs text-secondary uppercase block mb-1">Legal Email</span>
