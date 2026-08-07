@@ -227,9 +227,9 @@ const Footer = ({ setActiveTab }) => {
       </div>
       {/* Pop-up Message at Lower Part of Screen */}
       {showCopiedToast && (
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-[#1c1b1b]/95 text-secondary border border-secondary/50 px-6 py-3 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.8)] backdrop-blur-md flex items-center gap-2.5 font-label-caps text-sm font-semibold tracking-wide pointer-events-none transition-all duration-300">
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-[#1c1b1b]/95 text-secondary border border-secondary/50 px-6 py-3 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.8)] backdrop-blur-md flex items-center gap-2.5 font-label-caps text-sm font-semibold tracking-wide pointer-events-none transition-all duration-300 whitespace-nowrap">
           <span className="material-symbols-outlined text-secondary text-lg">check_circle</span>
-          <span>Copied - Send it to anyone</span>
+          <span>Copied - Send Anyone</span>
         </div>
       )}
     </footer>
