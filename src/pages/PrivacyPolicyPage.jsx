@@ -266,8 +266,8 @@ const PrivacyPolicyPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
               <div className="space-y-4">
                 <div>
                   <span className="font-label-caps text-xs text-secondary uppercase block mb-1">Official Website</span>
-                  <a href="https://task.com" target="_blank" rel="noopener noreferrer" className="font-body-md text-on-surface hover:text-primary transition-colors font-medium">
-                    https://task.com
+                  <a href="https://task-orpin-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-body-md text-on-surface hover:text-primary transition-colors font-medium">
+                    https://task-orpin-gamma.vercel.app/
                   </a>
                 </div>
                 <div>
