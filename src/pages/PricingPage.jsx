@@ -40,7 +40,7 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
             src={heroLightAsset} 
           />
           <img 
-            className={`absolute inset-0 w-full h-[120vh] object-cover object-top transition-opacity duration-500 ease-in-out pointer-events-none ${
+            className={`absolute inset-0 w-full h-[120vh] object-cover object-top blur-[6px] scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${
               activeDarkMode ? 'opacity-100' : 'opacity-0'
             }`} 
             alt="Dark Marketplace Scene" 

@@ -39,7 +39,7 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
         />
         <img 
           alt="Dark Marketplace Background" 
-          className={`absolute inset-0 w-full h-full object-cover object-center blur-md scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${
+          className={`absolute inset-0 w-full h-full object-cover object-center blur-[6px] scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${
             activeDarkMode ? 'opacity-100' : 'opacity-0'
           }`} 
           src={heroDarkAsset} 
