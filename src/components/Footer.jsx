@@ -93,8 +93,8 @@ const Footer = ({ setActiveTab }) => {
               <a href="#instagram" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30">
                 <span className="material-symbols-outlined text-[20px]">photo_camera</span>
               </a>
-              <a href="#twitter" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30">
-                <span className="material-symbols-outlined text-[20px]">alternate_email</span>
+              <a href="tel:+919310040848" title="Call Us: +91 93100 40848" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30">
+                <span className="material-symbols-outlined text-[20px]">call</span>
               </a>
             </div>
           </div>
