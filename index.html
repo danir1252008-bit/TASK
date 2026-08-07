@@ -585,6 +585,25 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       };
 
+      const handleShare = (e) => {
+        if (e) e.preventDefault();
+        if (navigator.share) {
+          navigator.share({
+            title: 'TASK - Digital Marketplace & Craft',
+            text: 'Check out TASK - Where Digital Craft Meets Marketplace Chaos',
+            url: window.location.href
+          }).catch(() => {});
+        } else if (navigator.clipboard) {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            alert('Website link copied to clipboard!');
+          }).catch(() => {
+            alert('Share this link: ' + window.location.href);
+          });
+        } else {
+          alert('Share this link: ' + window.location.href);
+        }
+      };
+
       const footerLogo = "https://lh3.googleusercontent.com/aida-public/AB6AXuDFRs65kMehhHQYet3Jr1umea0730SM8zyDfIdzqKDCOwaSBWAttAZoR8un9nkmaLuIDcK7nWkOvRPP0S1MibwtPCwK56FkIS3vg0rtSZeEtrukg7pg12A8RV1AcgzIp-Sqf1LO3mxuSTGaA0OjaMboKL_v0UemqFaYgwT3AIN8Sgf7Tyj7OA-Wc-pjk18IleDGfNEUPqDxcaUBVSDuSl_US2QWK4sB-ZtEgk4esJuM0bFU1K-jyxOHrJkUL_MsnnglVok";
 
       return (
@@ -651,9 +670,9 @@
                 </div>
                 
                 <div className="flex gap-4">
-                  <a href="#share" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30">
+                  <button onClick={handleShare} title="Share Website" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30 cursor-pointer">
                     <span className="material-symbols-outlined text-[20px]">share</span>
-                  </a>
+                  </button>
                   <a href="#instagram" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30">
                     <span className="material-symbols-outlined text-[20px]">photo_camera</span>
                   </a>
