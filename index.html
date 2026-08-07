@@ -580,9 +580,46 @@
 
     // --- Footer Component ---
     const Footer = ({ setActiveTab }) => {
+      const [showCopiedToast, setShowCopiedToast] = useState(false);
+
       const handleNavigate = (tab) => {
         setActiveTab(tab);
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+
+      const handleShareClick = (e) => {
+        if (e) e.preventDefault();
+        const currentUrl = (typeof window !== 'undefined' && window.location.href) || '';
+
+        const showToastMessage = () => {
+          setShowCopiedToast(true);
+          setTimeout(() => {
+            setShowCopiedToast(false);
+          }, 2800);
+        };
+
+        if (typeof navigator !== 'undefined' && navigator.clipboard) {
+          navigator.clipboard.writeText(currentUrl).then(() => {
+            showToastMessage();
+          }).catch(() => {
+            fallbackCopy(currentUrl);
+            showToastMessage();
+          });
+        } else {
+          fallbackCopy(currentUrl);
+          showToastMessage();
+        }
+      };
+
+      const fallbackCopy = (text) => {
+        try {
+          const textArea = document.createElement('textarea');
+          textArea.value = text;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+        } catch (_) {}
       };
 
       const footerLogo = "https://lh3.googleusercontent.com/aida-public/AB6AXuDFRs65kMehhHQYet3Jr1umea0730SM8zyDfIdzqKDCOwaSBWAttAZoR8un9nkmaLuIDcK7nWkOvRPP0S1MibwtPCwK56FkIS3vg0rtSZeEtrukg7pg12A8RV1AcgzIp-Sqf1LO3mxuSTGaA0OjaMboKL_v0UemqFaYgwT3AIN8Sgf7Tyj7OA-Wc-pjk18IleDGfNEUPqDxcaUBVSDuSl_US2QWK4sB-ZtEgk4esJuM0bFU1K-jyxOHrJkUL_MsnnglVok";
@@ -651,9 +688,9 @@
                 </div>
                 
                 <div className="flex gap-4">
-                  <a href="#share" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30">
+                  <button onClick={handleShareClick} aria-label="Share Website" title="Share Website" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30 cursor-pointer active:scale-95">
                     <span className="material-symbols-outlined text-[20px]">share</span>
-                  </a>
+                  </button>
                   <a href="#instagram" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:bg-secondary/20 hover:text-secondary transition-all border border-white/10 hover:border-secondary/30">
                     <span className="material-symbols-outlined text-[20px]">photo_camera</span>
                   </a>
@@ -714,6 +751,13 @@
               </div>
             </div>
           </div>
+          {/* Pop-up Message at Lower Part of Screen */}
+          {showCopiedToast && (
+            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-[#1c1b1b]/95 text-secondary border border-secondary/50 px-6 py-3 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.8)] backdrop-blur-md flex items-center gap-2.5 font-label-caps text-sm font-semibold tracking-wide pointer-events-none transition-all duration-300">
+              <span className="material-symbols-outlined text-secondary text-lg">check_circle</span>
+              <span>Copied - Send it to anyone</span>
+            </div>
+          )}
         </footer>
       );
     };
