@@ -870,8 +870,8 @@
           {/* Visible Stationary Background Image on Mobile, Fixed on Desktop */}
           <div className="absolute md:fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
             <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-background z-10"></div>
-            <img alt="Light Marketplace Background" className="absolute inset-0 w-full h-full object-cover object-center opacity-85 pointer-events-none" src="./Hero Page.png" />
-            <img alt="Dark Marketplace Background" className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} src="./hero-dark.jpg" />
+            <img alt="Light Marketplace Background" className="absolute inset-0 w-full h-full object-cover object-center opacity-85 blur-md scale-105 pointer-events-none" src="./Hero Page.png" />
+            <img alt="Dark Marketplace Background" className={`absolute inset-0 w-full h-full object-cover object-center blur-md scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} src="./hero-dark.jpg" />
           </div>
 
           <main className="relative z-10 pt-32 pb-section-gap">

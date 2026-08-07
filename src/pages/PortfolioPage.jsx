@@ -34,12 +34,12 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-background z-10"></div>
         <img 
           alt="Light Marketplace Background" 
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 pointer-events-none" 
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 blur-md scale-105 pointer-events-none" 
           src={heroLightAsset} 
         />
         <img 
           alt="Dark Marketplace Background" 
-          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ease-in-out pointer-events-none ${
+          className={`absolute inset-0 w-full h-full object-cover object-center blur-md scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${
             activeDarkMode ? 'opacity-100' : 'opacity-0'
           }`} 
           src={heroDarkAsset} 
