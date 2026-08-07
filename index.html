@@ -409,6 +409,13 @@
         filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9)) !important;
       }
     }
+
+    /* Laptop/Desktop-only Text Drop Shadow for Hero Title */
+    @media (min-width: 768px) {
+      .hero-title-desktop-shadow {
+        filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 30px rgba(0, 0, 0, 0.85)) drop-shadow(0 2px 6px rgba(0, 0, 0, 1)) !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-background text-on-background antialiased min-h-screen relative selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
@@ -799,7 +806,7 @@
               <span className="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-6 inline-block px-5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-secondary/40 hero-label-mobile-shadow">
                 The Sunset Gateway
               </span>
-              <h1 className="font-headline-xl text-3xl md:text-headline-xl text-gradient mb-6 leading-tight hero-title-mobile-shadow">
+              <h1 className="font-headline-xl text-3xl md:text-headline-xl text-gradient mb-6 leading-tight hero-title-mobile-shadow hero-title-desktop-shadow">
                 Where Digital Craft Meets Marketplace Chaos
               </h1>
               <p className="font-body-lg text-body-lg text-on-surface max-w-2xl mx-auto mb-10 font-medium leading-relaxed hero-body-mobile-shadow">

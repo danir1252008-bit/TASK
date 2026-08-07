@@ -59,7 +59,7 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
             The Sunset Gateway
           </span>
           
-          <h1 className="font-headline-xl text-3xl md:text-headline-xl text-gradient mb-6 leading-tight hero-title-mobile-shadow">
+          <h1 className="font-headline-xl text-3xl md:text-headline-xl text-gradient mb-6 leading-tight hero-title-mobile-shadow hero-title-desktop-shadow">
             Where Digital Craft Meets Marketplace Chaos
           </h1>
           
