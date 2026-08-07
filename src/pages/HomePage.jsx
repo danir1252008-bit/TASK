@@ -55,15 +55,15 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
         
         {/* Clean Foreground Text (Hanging over background shadow) */}
         <div className="text-center max-w-4xl mx-auto p-4 relative z-10">
-          <span className="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-6 inline-block px-5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-secondary/40">
+          <span className="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-6 inline-block px-5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-secondary/40 hero-label-mobile-shadow">
             The Sunset Gateway
           </span>
           
-          <h1 className="font-headline-xl text-3xl md:text-headline-xl text-gradient mb-6 leading-tight">
+          <h1 className="font-headline-xl text-3xl md:text-headline-xl text-gradient mb-6 leading-tight hero-title-mobile-shadow">
             Where Digital Craft Meets Marketplace Chaos
           </h1>
           
-          <p className="font-body-lg text-body-lg text-on-surface max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
+          <p className="font-body-lg text-body-lg text-on-surface max-w-2xl mx-auto mb-10 font-medium leading-relaxed hero-body-mobile-shadow">
             We weave cinematic stories into high-performance digital storefronts. A maximalist approach to modern web architecture, rooted in timeless craftsmanship.
           </p>
 

@@ -270,3 +270,20 @@
     animation: none;
   }
 }
+
+/* Mobile-only Pure Text Shadow (No background container, Desktop strictly untouched) */
+@media (max-width: 767px) {
+  .hero-title-mobile-shadow {
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 1)) drop-shadow(0 0 25px rgba(0, 0, 0, 0.95)) drop-shadow(0 2px 4px rgba(0, 0, 0, 1)) !important;
+  }
+  
+  .hero-body-mobile-shadow {
+    color: #ffffff !important;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 0.95), 0 2px 4px rgba(0, 0, 0, 1) !important;
+  }
+
+  .hero-label-mobile-shadow {
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9)) !important;
+  }
+}
+

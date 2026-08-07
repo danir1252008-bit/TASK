@@ -9,7 +9,7 @@ $listener.Start()
 Write-Host "=================================================="
 Write-Host " TASK Phone & PC Server Active:"
 Write-Host " - PC Localhost:  http://localhost:$port/"
-Write-Host " - Phone Link:    http://192.168.0.105:$port/"
+Write-Host " - Phone Link:    http://192.168.0.100:$port/"
 Write-Host "=================================================="
 
 try {
