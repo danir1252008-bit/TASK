@@ -249,8 +249,8 @@ const PrivacyPolicyPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
                 </div>
                 <div>
                   <span className="font-label-caps text-xs text-secondary uppercase block mb-1">Legal Email</span>
-                  <a href="mailto:privacy@taskagency.com" className="font-body-md text-on-surface hover:text-primary transition-colors font-medium">
-                    privacy@taskagency.com
+                  <a href="mailto:Taskfromindia@gmail.com" className="font-body-md text-on-surface hover:text-primary transition-colors font-medium">
+                    Taskfromindia@gmail.com
                   </a>
                 </div>
                 <div>

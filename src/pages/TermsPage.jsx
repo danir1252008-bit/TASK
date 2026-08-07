@@ -308,8 +308,8 @@ const TermsPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
                 </div>
                 <div>
                   <span className="font-label-caps text-xs text-secondary uppercase block mb-1">Legal & Billing Email</span>
-                  <a href="mailto:hello@taskstudio.in" className="font-body-md text-on-surface hover:text-primary transition-colors font-medium">
-                    hello@taskstudio.in
+                  <a href="mailto:Taskfromindia@gmail.com" className="font-body-md text-on-surface hover:text-primary transition-colors font-medium">
+                    Taskfromindia@gmail.com
                   </a>
                 </div>
                 <div>

@@ -75,10 +75,10 @@ const Footer = ({ setActiveTab }) => {
             </div>
             <div className="space-y-3 font-body-md text-body-md text-on-surface-variant/70 mb-8">
               <a 
-                href="mailto:hello@taskstudio.in" 
+                href="mailto:Taskfromindia@gmail.com" 
                 className="hover:text-secondary transition-colors flex items-center gap-2"
               >
-                <span className="material-symbols-outlined text-sm">mail</span> hello@taskstudio.in
+                <span className="material-symbols-outlined text-sm">mail</span> Taskfromindia@gmail.com
               </a>
               <a 
                 href="tel:+919310040848" 
