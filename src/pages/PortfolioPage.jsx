@@ -221,8 +221,11 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
         {/* Bottom Call to Action */}
         <section className="text-center mt-24">
           <button 
-            onClick={() => setActiveTab('contact')}
-            className="bg-primary-container text-on-primary-container font-button-text text-button-text px-10 py-4 rounded-lg lantern-glow hover:scale-105 transition-all font-bold"
+            onClick={() => {
+              setActiveTab('contact');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="bg-primary-container text-on-primary-container font-button-text text-button-text px-10 py-4 rounded-lg lantern-glow hover:scale-105 transition-all font-bold cursor-pointer"
           >
             Transform Your Business Today
           </button>
