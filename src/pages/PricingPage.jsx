@@ -547,7 +547,7 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
                 onClick={() => openWhatsApp(WEBSITE_TYPES[websiteType].label, selectedOption.duration, selectedOption.priceVal)}
                 className="w-full py-4 rounded-lg bg-primary-container text-on-primary-container font-button-text text-button-text hover:bg-primary-container/80 transition-all crimson-glow mt-auto font-bold tracking-wider hover:scale-105 active:scale-95 cursor-pointer flex items-center justify-center gap-2"
               >
-                <span>Continue on WhatsApp</span>
+                <span>Let's Go</span>
                 <span className="material-symbols-outlined text-base">arrow_forward</span>
               </button>
             </div>
