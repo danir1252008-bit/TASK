@@ -178,7 +178,7 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
             <div className="h-64 relative overflow-hidden">
               <img 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                alt="Studio Sandstone" 
+                alt="XYZ ARCHITECTURE" 
                 src={portfolio2} 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
@@ -191,7 +191,7 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
             <div className="p-6">
               <div className="flex items-center justify-between mb-2">
                 <h3 className="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">
-                  Studio Sandstone
+                  XYZ ARCHITECTURE
                 </h3>
                 <span className="material-symbols-outlined text-secondary text-sm">open_in_new</span>
               </div>
