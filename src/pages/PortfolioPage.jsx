@@ -183,21 +183,37 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
                 <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
                   A luxury e-commerce experience crafted for bespoke, timeless, and everyday luxury jewelry collections.
                 </p>
-                <div className="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-1.5 rounded-full border border-primary/30">
-                  <span className="material-symbols-outlined text-sm">trending_up</span>
-                  <span className="font-label-caps text-label-caps">+350% ONLINE SALES</span>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <div className="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-1.5 rounded-full border border-primary/30">
+                    <span className="material-symbols-outlined text-sm">trending_up</span>
+                    <span className="font-label-caps text-label-caps">+350% ONLINE SALES</span>
+                  </div>
+                  <a 
+                    href="https://xyz-jewelry-oncq827.public.builtwithrocket.new/#visit" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-1.5 bg-secondary text-on-secondary px-4 py-1.5 rounded-full font-label-caps text-label-caps font-bold hover:scale-105 transition-all"
+                  >
+                    <span className="material-symbols-outlined text-sm">open_in_new</span>
+                    VISIT LIVE SITE
+                  </a>
                 </div>
               </div>
             </div>
 
             <div className="md:col-span-6 md:col-start-7 relative">
-              <div className="glass-panel rounded-xl overflow-hidden aspect-video relative border border-outline-variant/30 shadow-2xl group">
+              <a 
+                href="https://xyz-jewelry-oncq827.public.builtwithrocket.new/#visit" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="glass-panel rounded-xl overflow-hidden aspect-video relative border border-outline-variant/30 shadow-2xl group block"
+              >
                 <img 
                   src={jewelryImg} 
                   alt="XYZ Jewelry Web Experience" 
                   className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
                 />
-              </div>
+              </a>
             </div>
           </div>
         </section>
