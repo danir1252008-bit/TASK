@@ -186,7 +186,7 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
                 Studio Sandstone
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                Spatial storytelling translated into a dynamic web architecture portfolio.
+                Spatial storytelling translated into a dynamic web architecture portfolio with immersive 3D designs.
               </p>
             </div>
           </div>
@@ -199,22 +199,22 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
             <div className="h-64 relative overflow-hidden">
               <img 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                alt="Crimson Dusk" 
+                alt="XYZ Fragrances" 
                 src={portfolio3} 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
               <div className="absolute bottom-4 left-4">
                 <span className="font-label-caps text-label-caps text-primary border border-primary/50 px-3 py-1 rounded bg-background">
-                  Branding
+                  Luxury & Perfume
                 </span>
               </div>
             </div>
             <div className="p-6">
               <h3 className="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-secondary transition-colors">
-                Crimson Dusk
+                XYZ Fragrances
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                A sensory branding journey built with fluid micro-interactions and depth.
+                An elegant e-commerce experience for bespoke luxury perfumes, sensory branding, and artisanal scents.
               </p>
             </div>
           </div>
