@@ -189,7 +189,7 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
                     <span className="font-label-caps text-label-caps">+350% ONLINE SALES</span>
                   </div>
                   <a 
-                    href="https://xyz-jewelry-oncq827.public.builtwithrocket.new/#visit" 
+                    href="https://xyz-jewelry-oncq827.public.builtwithrocket.new/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-flex items-center gap-1.5 bg-secondary text-on-secondary px-4 py-1.5 rounded-full font-label-caps text-label-caps font-bold hover:scale-105 transition-all"
@@ -203,7 +203,7 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
 
             <div className="md:col-span-6 md:col-start-7 relative">
               <a 
-                href="https://xyz-jewelry-oncq827.public.builtwithrocket.new/#visit" 
+                href="https://xyz-jewelry-oncq827.public.builtwithrocket.new/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="glass-panel rounded-xl overflow-hidden aspect-video relative border border-outline-variant/30 shadow-2xl group block"
