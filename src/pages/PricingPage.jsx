@@ -191,13 +191,14 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
   const selectedOption = activePricingData.find(opt => opt.id === selectedDurationId) || activePricingData[3];
 
   const generateWhatsAppMessage = (service, duration, price) => {
-    return `Hi TASK! \uD83D\uDC4B\n\nI'm interested in the following service:\n\nService: ${service}\nPlan/Duration: ${duration}\nPrice: ${price}\n\nI'd like to know more about this plan and the next steps.`;
+    const wave = String.fromCodePoint(0x1F44B);
+    return `Hi TASK! ${wave}\n\nI'm interested in the following service:\n\nService: ${service}\nPlan/Duration: ${duration}\nPrice: ${price}\n\nI'd like to know more about this plan and the next steps.`;
   };
 
   const openWhatsApp = (service, duration, price) => {
     const message = generateWhatsAppMessage(service, duration, price);
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/9310040848?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/919310040848?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 

@@ -476,7 +476,7 @@
     const Navbar = ({ activeTab, setActiveTab, isDarkMode, setIsDarkMode }) => {
       const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
       const logoSrc = "https://lh3.googleusercontent.com/aida-public/AB6AXuAOn2QRGn-BG4x5vuubQ-4M2dIB7N930LKtPmOXJBOE48bCXvuRekAGtjBruiBoJGdsQMgQ4PppE2YqmNux6nRDR53HIG0zBSgRvJrhCxmCqRSXOwfKqc3LrD8W9Wf7WwYs6veYbCRtqvOcvgRIb84qWr9SFWcyivT7PscGfX343QDDwi9xFvK0Pdy2dYJ7Duc5mp3Ij3OTCHoM3-ozZncK61O0yX-uyP4RSztCN-wSxrvzVF-Hn-32XFnop2EprH5HEZA";
-      const whatsappUrl = "https://wa.me/9310040848?text=Hi%20TASK,%20I%20want%20to%20build%20a%20website.";
+      const whatsappUrl = "https://wa.me/919310040848?text=Hi%20TASK%20%F0%9F%90%AB%2C%20I%20want%20to%20build%20a%20website.";
 
       const handleNavClick = (tab) => {
         setActiveTab(tab);
@@ -1268,13 +1268,14 @@
       const selectedOption = activePricingData.find(opt => opt.id === selectedDurationId) || activePricingData[3];
 
       const generateWhatsAppMessage = (service, duration, price) => {
-        return `Hi TASK! \uD83D\uDC4B\n\nI'm interested in the following service:\n\nService: ${service}\nPlan/Duration: ${duration}\nPrice: ${price}\n\nI'd like to know more about this plan and the next steps.`;
+        const wave = String.fromCodePoint(0x1F44B);
+        return `Hi TASK! ${wave}\n\nI'm interested in the following service:\n\nService: ${service}\nPlan/Duration: ${duration}\nPrice: ${price}\n\nI'd like to know more about this plan and the next steps.`;
       };
 
       const openWhatsApp = (service, duration, price) => {
         const message = generateWhatsAppMessage(service, duration, price);
         const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/9310040848?text=${encodedMessage}`;
+        const whatsappUrl = `https://wa.me/919310040848?text=${encodedMessage}`;
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
       };
 
