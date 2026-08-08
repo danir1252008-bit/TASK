@@ -125,16 +125,21 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
             </div>
           </div>
 
-          {/* Project 2: XYZ Coaching App */}
+          {/* Project 2: XYZ Cafe */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-6 md:col-start-1 order-2 md:order-1 relative">
-              <div className="glass-panel rounded-xl overflow-hidden aspect-[4/3] relative border border-outline-variant/30 shadow-2xl group flex items-center justify-center p-2 bg-black/40">
+              <a 
+                href="https://refined-xyz-cafe.preview.emergentagent.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="glass-panel rounded-xl overflow-hidden aspect-[4/3] relative border border-outline-variant/30 shadow-2xl group flex items-center justify-center p-2 bg-black/40 block"
+              >
                 <img 
                   src={coachingMobileImg} 
-                  alt="XYZ Coaching App Mobile Mockup" 
+                  alt="XYZ Cafe Mobile Mockup" 
                   className="max-h-full w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 rounded-lg" 
                 />
-              </div>
+              </a>
             </div>
 
             <div className="md:col-span-5 md:col-start-8 order-1 md:order-2 relative z-10">
@@ -147,9 +152,20 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
                 <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
                   Where every cup tells a story. A quiet corner in the middle of the city — small-batch coffee, slow-baked pastries, and seamless digital table reservations.
                 </p>
-                <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full border border-secondary/30 md:ml-auto">
-                  <span className="material-symbols-outlined text-sm">restaurant</span>
-                  <span className="font-label-caps text-label-caps">ARTISANAL CAFE & RESERVATIONS</span>
+                <div className="flex items-center gap-3 flex-wrap md:justify-end">
+                  <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full border border-secondary/30">
+                    <span className="material-symbols-outlined text-sm">restaurant</span>
+                    <span className="font-label-caps text-label-caps">ARTISANAL CAFE & RESERVATIONS</span>
+                  </div>
+                  <a 
+                    href="https://refined-xyz-cafe.preview.emergentagent.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-1.5 bg-secondary text-on-secondary px-4 py-1.5 rounded-full font-label-caps text-label-caps font-bold hover:scale-105 transition-all"
+                  >
+                    <span className="material-symbols-outlined text-sm">open_in_new</span>
+                    VISIT LIVE SITE
+                  </a>
                 </div>
               </div>
             </div>
