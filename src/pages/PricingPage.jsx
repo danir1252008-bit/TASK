@@ -191,8 +191,7 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
   const selectedOption = activePricingData.find(opt => opt.id === selectedDurationId) || activePricingData[3];
 
   const generateWhatsAppMessage = (service, duration, price) => {
-    const wave = String.fromCodePoint(0x1F44B);
-    return `Hi TASK! ${wave}\n\nI'm interested in the following service:\n\nService: ${service}\nPlan/Duration: ${duration}\nPrice: ${price}\n\nI'd like to know more about this plan and the next steps.`;
+    return `Hi TASK!\n\nI'm interested in the following service:\n\nService: ${service}\nPlan/Duration: ${duration}\nPrice: ${price}\n\nI'd like to know more about this plan and the next steps.`;
   };
 
   const openWhatsApp = (service, duration, price) => {

@@ -5,7 +5,7 @@ const Navbar = ({ activeTab, setActiveTab, isDarkMode, setIsDarkMode }) => {
 
   const logoSrc = "https://lh3.googleusercontent.com/aida-public/AB6AXuAOn2QRGn-BG4x5vuubQ-4M2dIB7N930LKtPmOXJBOE48bCXvuRekAGtjBruiBoJGdsQMgQ4PppE2YqmNux6nRDR53HIG0zBSgRvJrhCxmCqRSXOwfKqc3LrD8W9Wf7WwYs6veYbCRtqvOcvgRIb84qWr9SFWcyivT7PscGfX343QDDwi9xFvK0Pdy2dYJ7Duc5mp3Ij3OTCHoM3-ozZncK61O0yX-uyP4RSztCN-wSxrvzVF-Hn-32XFnop2EprH5HEZA";
   
-  const whatsappUrl = "https://wa.me/919310040848?text=Hi%20TASK%20%F0%9F%90%AB%2C%20I%20want%20to%20build%20a%20website.";
+  const whatsappUrl = "https://wa.me/919310040848?text=Hi%20TASK,%20I%20want%20to%20build%20a%20website.";
 
   const handleNavClick = (tab) => {
     setActiveTab(tab);
