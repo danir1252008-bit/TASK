@@ -190,9 +190,15 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
   const activePricingData = WEBSITE_TYPES[websiteType].pricingData;
   const selectedOption = activePricingData.find(opt => opt.id === selectedDurationId) || activePricingData[3];
 
-  const handleSelectPlan = (planName) => {
-    if (setActiveTab) setActiveTab('contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const generateWhatsAppMessage = (service, duration, price) => {
+    return `Hi TASK! 👋\n\nI'm interested in the following service:\n\nService: ${service}\nPlan/Duration: ${duration}\nPrice: ${price}\n\nI'd like to know more about this plan and the next steps.`;
+  };
+
+  const openWhatsApp = (service, duration, price) => {
+    const message = generateWhatsAppMessage(service, duration, price);
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/9310040848?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -292,10 +298,11 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
               </ul>
               
               <button 
-                onClick={() => handleSelectPlan("Logo Making")}
-                className="w-full py-3.5 rounded-lg border border-secondary/50 text-secondary font-button-text text-button-text hover:bg-secondary/10 transition-colors mt-auto font-semibold tracking-wider hover:scale-105 active:scale-95 cursor-pointer"
+                onClick={() => openWhatsApp("Logo Design", "One-time", "₹1,499")}
+                className="w-full py-3.5 rounded-lg border border-secondary/50 text-secondary font-button-text text-button-text hover:bg-secondary/10 transition-colors mt-auto font-semibold tracking-wider hover:scale-105 active:scale-95 cursor-pointer flex items-center justify-center gap-2"
               >
-                Get Your Logo
+                <span>Get Your Logo</span>
+                <span className="material-symbols-outlined text-base">arrow_forward</span>
               </button>
             </div>
 
@@ -537,10 +544,10 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
               </div>
 
               <button 
-                onClick={() => handleSelectPlan(`${WEBSITE_TYPES[websiteType].label} (${selectedOption.duration})`)}
+                onClick={() => openWhatsApp(WEBSITE_TYPES[websiteType].label, selectedOption.duration, selectedOption.priceVal)}
                 className="w-full py-4 rounded-lg bg-primary-container text-on-primary-container font-button-text text-button-text hover:bg-primary-container/80 transition-all crimson-glow mt-auto font-bold tracking-wider hover:scale-105 active:scale-95 cursor-pointer flex items-center justify-center gap-2"
               >
-                <span>Get Started - {WEBSITE_TYPES[websiteType].label} ({selectedOption.duration})</span>
+                <span>Continue on WhatsApp</span>
                 <span className="material-symbols-outlined text-base">arrow_forward</span>
               </button>
             </div>
@@ -605,10 +612,11 @@ const PricingPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
               </ul>
 
               <button 
-                onClick={() => handleSelectPlan("WhatsApp Automation")}
-                className="w-full py-3.5 rounded-lg border border-secondary/50 text-secondary font-button-text text-button-text hover:bg-secondary/10 transition-colors mt-auto font-semibold tracking-wider hover:scale-105 active:scale-95 cursor-pointer"
+                onClick={() => openWhatsApp("WhatsApp Automation", "One-time setup", "₹4,999")}
+                className="w-full py-3.5 rounded-lg border border-secondary/50 text-secondary font-button-text text-button-text hover:bg-secondary/10 transition-colors mt-auto font-semibold tracking-wider hover:scale-105 active:scale-95 cursor-pointer flex items-center justify-center gap-2"
               >
-                Automate My WhatsApp
+                <span>Get Started</span>
+                <span className="material-symbols-outlined text-base">arrow_forward</span>
               </button>
             </div>
 
