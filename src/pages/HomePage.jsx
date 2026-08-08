@@ -169,9 +169,11 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
           </a>
 
           {/* Card 2 */}
-          <div 
-            onClick={() => setActiveTab('portfolio')}
-            className="solid-panel bg-[#1c1b1b] rounded-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-secondary/20 hover:border-secondary/60"
+          <a 
+            href="https://xyz-dvw6d74.public.builtwithrocket.new/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="solid-panel bg-[#1c1b1b] rounded-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-secondary/20 hover:border-secondary/60 block"
           >
             <div className="h-64 relative overflow-hidden">
               <img 
@@ -187,14 +189,17 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
               </div>
             </div>
             <div className="p-6">
-              <h3 className="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-secondary transition-colors">
-                Studio Sandstone
-              </h3>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">
+                  Studio Sandstone
+                </h3>
+                <span className="material-symbols-outlined text-secondary text-sm">open_in_new</span>
+              </div>
               <p className="font-body-md text-body-md text-on-surface-variant">
                 Spatial storytelling translated into a dynamic web architecture portfolio with immersive 3D designs.
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Card 3 */}
           <a 
