@@ -124,16 +124,16 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
             <div className="md:col-span-5 md:col-start-8 order-1 md:order-2 relative z-10">
               <div className="glass-panel p-8 rounded-xl glow-hover border border-secondary/30 bg-[#1c1b1b]/90 text-left md:text-right">
                 <div className="flex items-center gap-3 mb-4 md:justify-end">
-                  <span className="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">XYZ MOBILE APP</span>
-                  <span className="material-symbols-outlined text-tertiary">smartphone</span>
+                  <span className="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">XYZ CAFE</span>
+                  <span className="material-symbols-outlined text-tertiary">local_cafe</span>
                 </div>
-                <h2 className="font-headline-md text-headline-md text-on-surface mb-4">XYZ Coaching App</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface mb-4">XYZ Cafe</h2>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-                  Redefining mobile learning with an intuitive, sleek interface designed for admissions, course tracking, and competitive exam preparation.
+                  Where every cup tells a story. A quiet corner in the middle of the city — small-batch coffee, slow-baked pastries, and seamless digital table reservations.
                 </p>
                 <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full border border-secondary/30 md:ml-auto">
-                  <span className="material-symbols-outlined text-sm">download</span>
-                  <span className="font-label-caps text-label-caps">50,000+ ACTIVE USERS</span>
+                  <span className="material-symbols-outlined text-sm">restaurant</span>
+                  <span className="font-label-caps text-label-caps">ARTISANAL CAFE & RESERVATIONS</span>
                 </div>
               </div>
             </div>
