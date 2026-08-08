@@ -136,32 +136,37 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Card 1 */}
-          <div 
-            onClick={() => setActiveTab('portfolio')}
-            className="solid-panel bg-[#1c1b1b] rounded-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-secondary/20 hover:border-secondary/60"
+          <a 
+            href="https://xyzcoaching-cz7hi63.public.builtwithrocket.new/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="solid-panel bg-[#1c1b1b] rounded-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-secondary/20 hover:border-secondary/60 block"
           >
             <div className="h-64 relative overflow-hidden">
               <img 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                alt="The Jewelers Loom" 
+                alt="XYZ Coaching Centre" 
                 src={portfolio1} 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
               <div className="absolute bottom-4 left-4">
                 <span className="font-label-caps text-label-caps text-primary border border-primary/50 px-3 py-1 rounded bg-background">
-                  E-Commerce
+                  Education
                 </span>
               </div>
             </div>
             <div className="p-6">
-              <h3 className="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-secondary transition-colors">
-                The Jewelers Loom
-              </h3>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">
+                  XYZ Coaching Centre
+                </h3>
+                <span className="material-symbols-outlined text-secondary text-sm">open_in_new</span>
+              </div>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                A tactile, immersive shopping experience for handcrafted heritage jewelry.
+                A high-converting educational portal and exam preparation platform.
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Card 2 */}
           <div 

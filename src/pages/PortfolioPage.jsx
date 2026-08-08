@@ -91,21 +91,37 @@ const PortfolioPage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
                 <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
                   A high-converting educational portal and exam preparation platform designed to empower students and showcase top rankers across competitive exams.
                 </p>
-                <div className="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-1.5 rounded-full border border-primary/30">
-                  <span className="material-symbols-outlined text-sm">trending_up</span>
-                  <span className="font-label-caps text-label-caps">150+ TOP RANKERS</span>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <div className="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-1.5 rounded-full border border-primary/30">
+                    <span className="material-symbols-outlined text-sm">trending_up</span>
+                    <span className="font-label-caps text-label-caps">150+ TOP RANKERS</span>
+                  </div>
+                  <a 
+                    href="https://xyzcoaching-cz7hi63.public.builtwithrocket.new/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-1.5 bg-secondary text-on-secondary px-4 py-1.5 rounded-full font-label-caps text-label-caps font-bold hover:scale-105 transition-all"
+                  >
+                    <span className="material-symbols-outlined text-sm">open_in_new</span>
+                    VISIT LIVE SITE
+                  </a>
                 </div>
               </div>
             </div>
 
             <div className="md:col-span-6 md:col-start-7 relative">
-              <div className="glass-panel rounded-xl overflow-hidden aspect-video relative border border-outline-variant/30 shadow-2xl group">
+              <a 
+                href="https://xyzcoaching-cz7hi63.public.builtwithrocket.new/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="glass-panel rounded-xl overflow-hidden aspect-video relative border border-outline-variant/30 shadow-2xl group block"
+              >
                 <img 
                   src={coachingImg} 
                   alt="XYZ Coaching Centre Mockup" 
                   className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
                 />
-              </div>
+              </a>
             </div>
           </div>
 

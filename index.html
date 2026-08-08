@@ -879,11 +879,11 @@
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { title: "XYZ Coaching Centre", tag: "Education", desc: "A high-converting educational portal and exam preparation platform.", img: "./xyz-coaching.png" },
+                { title: "XYZ Coaching Centre", tag: "Education", desc: "A high-converting educational portal and exam preparation platform.", img: "./xyz-coaching.png", link: "https://xyzcoaching-cz7hi63.public.builtwithrocket.new/" },
                 { title: "Studio Sandstone", tag: "Architecture", desc: "Spatial storytelling translated into a dynamic web architecture portfolio with immersive 3D designs.", img: portfolio2 },
                 { title: "XYZ Fragrances", tag: "Luxury & Perfume", desc: "An elegant e-commerce experience for bespoke luxury perfumes, sensory branding, and artisanal scents.", img: portfolio3 }
               ].map((item, idx) => (
-                <div key={idx} onClick={() => setActiveTab('portfolio')} className="solid-panel bg-[#1c1b1b] rounded-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-secondary/20 hover:border-secondary/60">
+                <a key={idx} href={item.link || "#"} target={item.link ? "_blank" : "_self"} rel={item.link ? "noopener noreferrer" : ""} onClick={(e) => { if (!item.link) { e.preventDefault(); setActiveTab('portfolio'); } }} className="solid-panel bg-[#1c1b1b] rounded-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-secondary/20 hover:border-secondary/60 block">
                   <div className="h-64 relative overflow-hidden">
                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt={item.title} src={item.img} />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
@@ -894,14 +894,17 @@
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-secondary transition-colors">
-                      {item.title}
-                    </h3>
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">
+                        {item.title}
+                      </h3>
+                      {item.link && <span className="material-symbols-outlined text-secondary text-sm">open_in_new</span>}
+                    </div>
                     <p className="font-body-md text-body-md text-on-surface-variant">
                       {item.desc}
                     </p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </section>
@@ -980,17 +983,23 @@
                     <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
                       A high-converting educational portal and exam preparation platform designed to empower students and showcase top rankers across competitive exams.
                     </p>
-                    <div className="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-1.5 rounded-full border border-primary/30">
-                      <span className="material-symbols-outlined text-sm">trending_up</span>
-                      <span className="font-label-caps text-label-caps">150+ TOP RANKERS</span>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <div className="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-1.5 rounded-full border border-primary/30">
+                        <span className="material-symbols-outlined text-sm">trending_up</span>
+                        <span className="font-label-caps text-label-caps">150+ TOP RANKERS</span>
+                      </div>
+                      <a href="https://xyzcoaching-cz7hi63.public.builtwithrocket.new/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-secondary text-on-secondary px-4 py-1.5 rounded-full font-label-caps text-label-caps font-bold hover:scale-105 transition-all">
+                        <span className="material-symbols-outlined text-sm">open_in_new</span>
+                        VISIT LIVE SITE
+                      </a>
                     </div>
                   </div>
                 </div>
 
                 <div className="md:col-span-6 md:col-start-7 relative">
-                  <div className="glass-panel rounded-xl overflow-hidden aspect-video relative border border-outline-variant/30 shadow-2xl group">
+                  <a href="https://xyzcoaching-cz7hi63.public.builtwithrocket.new/" target="_blank" rel="noopener noreferrer" className="glass-panel rounded-xl overflow-hidden aspect-video relative border border-outline-variant/30 shadow-2xl group block">
                     <img src={coachingImg} alt="XYZ Coaching Centre Mockup" className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
-                  </div>
+                  </a>
                 </div>
               </div>
 
