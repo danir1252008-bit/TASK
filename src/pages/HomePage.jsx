@@ -184,7 +184,7 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
               <div className="absolute bottom-4 left-4">
                 <span className="font-label-caps text-label-caps text-primary border border-primary/50 px-3 py-1 rounded bg-background">
-                  Architecture
+                  Architecture & Design
                 </span>
               </div>
             </div>
@@ -196,7 +196,7 @@ const HomePage = ({ setActiveTab, isDarkMode: isDarkModeProp }) => {
                 <span className="material-symbols-outlined text-secondary text-sm">open_in_new</span>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                Spatial storytelling translated into a dynamic web architecture portfolio with immersive 3D designs.
+                A sleek, high-performance architectural showcase featuring spatial storytelling, structural elegance, and interactive 3D portfolio layouts.
               </p>
             </div>
           </a>
