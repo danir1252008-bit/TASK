@@ -1751,12 +1751,15 @@
       };
 
       return (
-        <main className="flex-grow relative flex items-center justify-center min-h-screen pt-32 pb-section-gap px-container-padding-mobile md:px-container-padding-desktop z-20">
-          <div className="absolute inset-0 z-[-1] overflow-hidden">
-            <div className="absolute inset-0 bg-background/50 z-10"></div>
-            <img alt="Light Marketplace Background" className="absolute inset-0 w-full h-full object-cover object-center opacity-85 pointer-events-none" src="./Hero Page.png" />
+        <div className="relative min-h-screen bg-background">
+          {/* Visible Fixed Background Layer behind Navigation Bar */}
+          <div className="absolute md:fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-background z-10"></div>
+            <img alt="Light Marketplace Background" className="absolute inset-0 w-full h-full object-cover object-center opacity-85 blur-md scale-105 pointer-events-none" src="./Hero Page.png" />
             <img alt="Dark Marketplace Background" className={`absolute inset-0 w-full h-full object-cover object-center blur-[6px] scale-105 transition-opacity duration-500 ease-in-out pointer-events-none ${activeDark ? 'opacity-100' : 'opacity-0'}`} src="./hero-dark.jpg" />
           </div>
+
+          <main className="relative flex items-center justify-center min-h-screen pt-32 pb-section-gap px-container-padding-mobile md:px-container-padding-desktop z-10">
 
           <div className="relative z-40 w-full max-w-2xl glass-panel rounded-[24px] p-8 md:p-12 ambient-glow border border-primary-container/30 overflow-hidden my-8">
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -1841,7 +1844,8 @@
             )}
           </div>
         </main>
-      );
+      </div>
+    );
     };
 
     // --- Privacy Policy Page Component ---

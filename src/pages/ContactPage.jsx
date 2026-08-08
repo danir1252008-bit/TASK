@@ -97,13 +97,13 @@ const ContactPage = ({ isDarkMode: isDarkModeProp }) => {
   };
 
   return (
-    <main className="flex-grow relative flex items-center justify-center min-h-screen pt-32 pb-section-gap px-container-padding-mobile md:px-container-padding-desktop z-20">
-      {/* Background Layer */}
-      <div className="absolute inset-0 z-[-1] overflow-hidden">
-        <div className="absolute inset-0 bg-background/50 z-10"></div>
+    <div className="relative min-h-screen bg-background">
+      {/* Fixed Fullscreen Background Layer behind Navigation Bar */}
+      <div className="absolute md:fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-background z-10"></div>
         <img 
           alt="Light Marketplace Background" 
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 pointer-events-none" 
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-85 blur-md scale-105 pointer-events-none" 
           src={heroLightAsset} 
         />
         <img 
@@ -114,6 +114,8 @@ const ContactPage = ({ isDarkMode: isDarkModeProp }) => {
           src={heroDarkAsset} 
         />
       </div>
+
+      <main className="relative flex items-center justify-center min-h-screen pt-32 pb-section-gap px-container-padding-mobile md:px-container-padding-desktop z-10">
 
       {/* Glassmorphic Lead Form Card */}
       <div className="relative z-40 w-full max-w-2xl bg-[#1c1b1b]/95 backdrop-blur-xl rounded-[24px] p-8 md:p-12 shadow-2xl border border-secondary/30 overflow-hidden my-8">
@@ -275,7 +277,8 @@ const ContactPage = ({ isDarkMode: isDarkModeProp }) => {
         )}
       </div>
     </main>
-  );
+  </div>
+);
 };
 
 export default ContactPage;
